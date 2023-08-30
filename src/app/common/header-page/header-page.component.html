@@ -1,0 +1,64 @@
+<!-- <div class="header-contaner"> -->
+  <div class="container-fluid sticky top-0 left-0 z-50" id="header-top">
+    <div class="">
+      <img src="/assets/Logo/EFPlogo.jpg" alt="">
+    </div>
+
+    <div class="w-full ">    
+      <nav *ngIf="displaymenu" >
+        <div class="navbar">
+        <div class="nav-links ">
+            <ul class="links flex pl-28">
+               <li> <a routerLink="/dashboard">ዳሽቦርድ </a></li>
+                <li>
+            <a href="#">ንብረት</a>
+            <i class='bx bx-chevron-down arrow html-arrow'></i>
+            <ul class="html-sub-menu html-sub">
+                <li class="fixed">
+                  <a href="#">ቋሚ ንብረት</a>
+                  <i class='bx bx-chevron-right arrow fixed-arrow'></i>
+                  <ul class="fixed-submenu">
+                    <li><a routerLink="/fixed/import">መመዝገብ</a></li>
+                    <li><a routerLink="/fixed/transferpage">ማስተላለፍ</a></li>
+                    <li><a href="fixed/withdroal">ወጪ</a></li> 
+                    <li><a href="#">ማስወገድ</a></li> 
+                </ul>
+                </li>
+                <li><a href="#">አላቂ ንብረት</a></li>
+            </ul>
+    
+        </li>
+        
+               <li>
+                <a href="#">የጦር መሣሪያ</a>
+                <i class='bx bx-chevron-down arrow ja-arrow'></i>
+                <ul class="html-sub-menu java-sub">
+                    <li><a routerLink="/admin/userReg">መመዝገብ</a></li>
+                    <li><a href="#">ማስተላለፍ</a></li>
+                    <li><a href="#">ማስወገድ</a></li>
+                    <!-- <li><a href="#">More </a>
+                        <i class='bx bx-chevron-right arrow more-arrow'></i>
+                    </li> -->
+                </ul>
+            
+            </li>
+              <li>  
+                <a routerLink="/home">
+                  ሪፖርት</a>
+            </li>
+    
+              <li > 
+                 <a href="#">ተጨማሪ መረጃ</a>
+                </li>
+                <div class="logout"><a routerLink="auth/login" style="float: right;" class="menulink">Logout</a></div>
+            </ul>
+           
+        </div>
+       
+        
+        </div>
+    </nav>
+    
+    </div>
+    
+  </div>

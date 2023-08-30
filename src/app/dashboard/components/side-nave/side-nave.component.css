@@ -1,0 +1,12 @@
+.nav-items{
+  padding : 20px;
+  
+  }
+  .nav-item{
+      margin-bottom: 20px;
+  
+  }
+  .nav-item:hover{
+    color: blueviolet;
+  
+  }

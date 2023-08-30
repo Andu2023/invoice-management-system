@@ -1,0 +1,118 @@
+
+/* h3{
+
+    font-size: 20px;
+    font-weight: 700;
+padding-top: 20px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: underline;
+} */
+/* 
+form{
+    
+    border: 1px solid;
+    border-radius: 4px;
+    box-sizing: border-box;
+    min-width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    
+  } */
+
+/* #save{
+    display: flex;
+    padding-top: 10px;
+    align-items: center;
+    column-gap: 30px;
+} */
+
+/* .sub{
+    padding-left: 50px;
+    display: flex;
+    justify-content: space-between;
+
+} */
+/* .card-body{
+    width: 100%;
+    height: 700px;
+} */
+
+/* td{
+    font-size: 18px;
+    font-weight: 500;
+}
+label{
+    font-weight: 500;
+}
+.trans .col-lg-6{
+    padding-left:60px;
+}
+
+    .reciv .col-lg-6{
+    padding-left:70px;
+} */
+/* .btn-dialog-close{
+    width: 50px;
+    min-width: 0 !important;
+    height: 50px;
+    padding: 0 !important;
+  
+  
+} */
+/* .btn-dialog-close:hover{
+    background-color: red;
+    color: #fff;
+    } */
+/* mat-toolbar{
+background-color: whitesmoke;
+color: red;
+width: 100%;
+border: black;
+} */
+/* mat-icon{
+    font-size: 18px;
+}
+input{
+    width: max-content;
+} */
+form{
+  height: 1200px;
+}
+mat-toolbar{
+    width: auto;
+    background-color: #fff;
+  
+}
+  mat-icon{
+    color: red;
+  }
+  input{
+    width: 90px;
+    border: #fff;
+}
+h3{
+    margin-left: 290px;
+    padding: 10px;
+}
+h2{
+    font-size: 16px;
+    font-weight: 300;
+    font-family: 'Times New Roman', Times, serif;
+}
+.card{
+    background-color: #fff;
+    align-items: center;
+    margin-left: 150px;
+}
+button{
+    border-radius: 5px;
+    color: black;
+    width: 90px;
+    height: 30px;
+   
+}
+/* .transfer{
+    width: 100%;
+    height: 1200px;
+} */

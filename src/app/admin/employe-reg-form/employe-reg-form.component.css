@@ -1,0 +1,17 @@
+input{
+  border-radius: 5px;
+}
+.submit{
+  width: 90px;
+  height: 30px;
+ background-color: #e3dddd;
+  border-radius: 3px;
+  margin-left: 500px;
+  margin-bottom: 50px;
+}
+.submit:hover{
+ 
+
+  background-color: #0c2a4c;
+  color: #fff;
+}

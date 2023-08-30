@@ -1,0 +1,44 @@
+.top-section {
+    
+  width: 700px;
+
+}
+.middle-section {
+display: flex;
+justify-content: space-between;
+
+ .widget {
+  height: 350px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 10px;
+  box-shadow: 5px 5px 5px #939393;
+  &.left {
+    width: 400px;
+
+  }
+  &.right {
+    width: 600px;
+  }
+}
+} 
+.bottom-section {
+display: flex;
+justify-content: space-between;
+.widget {
+  height: 250px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 10px;
+  box-shadow: 5px 5px 5px #939393;
+  &.left {
+    width: 600px;
+  
+  }
+  &.right {
+ 
+    width: 400px;
+  }
+ 
+  }
+}

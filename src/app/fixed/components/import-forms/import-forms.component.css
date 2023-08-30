@@ -1,0 +1,124 @@
+h3{
+  display: flex;
+  align-items: center;
+
+}
+
+/*  
+
+
+.form-group{
+  width: 230px;
+  border-radius: 5px;
+ 
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+margin-bottom: 10px;
+  color:#4343ff ;
+}
+input{
+  
+  outline: none;
+  box-shadow: none;
+  width: 100%;
+} */
+/* 
+form{
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 10px;
+  box-sizing: border-box;
+ height: 1200px;
+  display: inline-flex;
+  flex-direction: column;
+  background-color: #fff;
+  width: auto;
+} */
+/* 
+#save{
+  display: flex;
+ padding-top: 10px;
+  align-items: center;
+  column-gap: 30px;
+ 
+}
+
+.sub{
+  padding-left: 50px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+
+/* td{
+  font-size: 16px;
+  font-weight: 400;
+} */
+label{
+  font-weight: 500;
+}
+.trans .col-lg-6{
+  padding-left:60px;
+}
+
+  .reciv .col-lg-6{
+  padding-left:70px;
+} 
+input{
+   border-radius: 3px;
+}
+/* .btn-dialog-close{
+  width: 50px;
+  min-width: 0 !important;
+  height: 50px;
+  padding: 0 !important;
+
+
+}
+.btn-dialog-close:hover{
+background-color: red;
+color: #fff;
+}
+mat-toolbar{
+background-color: whitesmoke;
+color: red;
+width: 100%;
+border: black;
+} */
+
+
+button{
+  border-radius: 5px;
+  color: black;
+ 
+}
+mat-icon{
+  font-size: 12px;
+  align-items: center;
+  color: red;
+
+}
+.table-header{
+  color: black;
+  column-gap: 30px;
+  /* background-color: #fff; */
+}
+.card{
+  background-color: #fff;
+  align-items: center;
+  margin-left: 150px;
+}
+mat-toolbar{
+  width: auto;
+  background-color: #fff;
+
+}
+h3{
+  margin-left: 260px;
+  padding: 10px;
+}
+.save{
+  padding-left: 270px;
+}

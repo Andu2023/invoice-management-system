@@ -1,0 +1,13 @@
+.btn{
+  padding-left: 190px;
+  color: blue;
+}
+.text-center{
+  color: cornflowerblue;
+  column-gap: 20px;
+}
+.text-center a{
+  color: blue;
+  margin-left: 40px;
+  
+}

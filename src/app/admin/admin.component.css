@@ -1,0 +1,23 @@
+.main-container {
+  display: flex;
+  width: fit-content;
+
+  
+ 
+  
+}
+.side-nav {
+  margin-top: 10px;
+  padding-top: 30px;
+  min-width: 230px;
+  min-height: calc(100vh - 70px);
+  color:white;
+  box-shadow: 5px 5px 5px #939393;
+  background-color: #113c60;
+
+
+}
+.main {
+  
+    width: 1000px;
+}

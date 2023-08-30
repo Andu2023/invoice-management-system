@@ -1,0 +1,66 @@
+<div class="pb-28">
+  <mat-form-field  >
+    <mat-label>Search Material </mat-label>
+    <input matInput>
+    <button mat-icon-button matSuffix>
+        <mat-icon>search</mat-icon>
+    </button>
+</mat-form-field>
+  <mat-card>
+    <mat-card-content>
+        <div>
+            Showing results for 547 books
+        </div>
+       
+    </mat-card-content>
+</mat-card>
+<mat-accordion multi="true" >
+  <mat-expansion-panel expanded >
+      <mat-expansion-panel-header>
+          <mat-panel-title>category </mat-panel-title>
+          <mat-panel-description>subCategory </mat-panel-description>
+      </mat-expansion-panel-header>
+
+  <table class="mat-elevation-z8" mat-table matSort [dataSource]="productdata" >
+    <ng-container matColumnDef="productName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> productName</th>
+      <td mat-cell *matCellDef="let element">{{element.productName}}</td>
+  </ng-container>
+      <ng-container matColumnDef="productCode">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> productCode</th>
+          <td mat-cell *matCellDef="let element">{{element.productCode}}</td>
+      </ng-container>
+     
+      <ng-container matColumnDef="productModel">
+          <th mat-header-cell *matHeaderCellDef> productModel</th>
+          <td mat-cell *matCellDef="let element">{{element.productModel}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="qty">
+          <th mat-header-cell *matHeaderCellDef> qty</th>
+          <td mat-cell *matCellDef="let element">{{element.qty}}</td>
+      </ng-container>
+      <ng-container matColumnDef="salesPrice">
+        <th mat-header-cell *matHeaderCellDef> salesPrice</th>
+        <td mat-cell *matCellDef="let element">{{element.salesPrice | currency }}</td>
+    </ng-container>
+    <ng-container matColumnDef="total">
+      <th mat-header-cell *matHeaderCellDef> total</th>
+      <td mat-cell *matCellDef="let element">{{element.total}}</td>
+  </ng-container>
+<ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef style="width:15%"> Action</th>
+          <td mat-cell *matCellDef="let element">
+              <a mat-raised-button color="primary" (click)="EditProduct(element.code)" >Edit</a> |
+              <a mat-raised-button color="accent" >Delete</a>
+          </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayColums"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayColums;"></tr>
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of periodic elements">
+      </mat-paginator>
+  </table>
+</mat-expansion-panel>
+</mat-accordion>
+
+</div>

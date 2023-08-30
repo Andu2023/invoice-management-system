@@ -1,0 +1,140 @@
+<div class="transfer h-90">
+  <form class=" bg-white w-full" [formGroup]="Transformform" (ngSubmit)="SaveItem()">
+      <div class="items-center justify-center">
+          <mat-toolbar class="flex justify-end">
+              <button class="btn-dialog-close flex justify-center items-center" mat-stroked-button (click)="onclose()" tabindex="-1">
+                  <mat-icon class="flex justify-center items-center"  >close</mat-icon>
+              </button>
+            </mat-toolbar>
+          <h3 class="items-center justify-center">{{pagetitle}}</h3>
+          <div class="card justify-center items-center">
+              <div class="row">
+                <div class="sub flex grid-cols-2 mb-2">
+                  <div class="trans w-6/12">
+                      <h2>ንብረት አስተላላፊ</h2>
+                      <table>
+                          <tr class="flex grid-cols-2 mb-2">
+                              <td class="w-6/12">   <label >መለያቁጥር</label></td>
+                              <td class="w-6/12">              <input placeholder=" " formControlName="Assesterid" class="form-control outline-none border px-3 py-1 bg-gray-50 w-48">                        </td>
+                          </tr>
+                          <tr class="flex grid-cols-2 mb-2">
+                              <td class="w-6/12"><label >ስም</label></td>
+                              <td class="w-6/12">  <input placeholder="" formControlName="AssesterName" class="form-control outline-none border px-3 py-1 bg-gray-50 w-48">
+                              </td>
+                          </tr>
+                        
+                          <tr class="flex grid-cols-2">
+                              <td class="w-6/12"> <label >የሥራ ክፍል</label></td>
+                              <td class="w-6/12"><input placeholder="" formControlName="Assesterdepartmnt" class="form-control outline-none border px-3 py-1 bg-gray-50 w-72">                        </td>
+                          </tr>
+                      </table>
+                     
+                  </div>
+                  <div class="reciv w-6/12">
+                      <h2>ንብረት ተቀባይ</h2>
+                      <table class="space-y-3">
+                          <tr class="flex grid-cols-2">
+                              <td class="w-6/12">   <label >መለያቁጥር</label></td>
+                              <td class="w-6/12"><input placeholder=" " formControlName="Assesterid" class="form-control outline-none border px-3 py-1 bg-gray-100">                        </td>
+                          </tr>
+                          <tr class="flex grid-cols-4">
+                              <td class="w-6/12"><label >ስም</label></td>
+                              <td class="w-6/12">                        <input placeholder="" formControlName="AssesterName" class="form-control outline-none border px-3 py-1 bg-gray-100">
+                              </td>
+                          </tr>
+                        
+                          <tr class="flex grid-cols-2">
+                              <td class="w-6/12"> <label >የሥራ ክፍል</label></td>
+                              <td class="w-6/12"><input placeholder="" formControlName="Assesterdepartmnt" class="form-control outline-none border px-3 py-1 bg-gray-100">                        </td>
+                          </tr>
+                      </table>
+                  </div>
+                </div>
+                  
+              </div>
+              <br>
+              <div class="row">
+                  <div class="relative overflow-x-auto">
+                   <table class="table-fixed  text-sm text-left text-gray-500 dark:text-gray-400" formArrayName="Detailes">
+                           <thead  class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 " id="detailes">
+                              <tr class="">
+                                  <td class="px-6 py-3">ቁ</td>
+                                  <td class="px-6 py-3">የእቃው ስም</td>
+                                  <td class="px-6 py-3">ሞደል</td>
+                                  <td class="px-6 py-3">ሴራል</td>
+                                  <td class="px-6 py-3">ብዛት</td>
+                                  <td class="px-6 py-3">የአንዱ ዋጋ</td>
+                                  <td class="px-6 py-3">ምርመሪ</td>
+                                  <td class="px-6 py-3"></td>
+      
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700" *ngFor="let item of Gebeproduct.controls;let i=index"[formGroupName]="i ">
+                                  <td class="px-6 py-4">{{i+1}}</td>
+                       <td class="px-6 py-4">
+                          <input class="form-control outline-none border px-3 py-1 bg-gray-300 " formControlName="Description">
+                       </td>
+                       <td class="px-6 py-4">
+                          <input class="form-control  outline-none border px-3 py-1 bg-gray-300" formControlName=" PIN">
+                       </td>
+                       <td class="px-6 py-4">
+                          <input class="form-control border px-3 py-1 bg-gray-300" formControlName="Serial">
+                       </td>
+                       <td class="px-6 py-4">
+                          <input class="form-control outline-none border px-3 py-1 bg-gray-300" formControlName="Quantity">
+                       </td>
+                       <td class="px-6 py-4">
+                          <input class="form-control outline-none border px-3 py-1 bg-gray-300" formControlName="Price">
+                       </td>
+                       <td class="px-6 py-4">
+                          <input class="form-control outline-none border px-3 py-1 bg-gray-300" formControlName="Remark">
+                       </td>
+                       <td class="px-6 py-4">
+                          <a class="btn btn-danger"> <mat-icon>delete</mat-icon></a>
+                       </td>
+                        </tr>
+                           </tbody> 
+                           <tfoot>
+                              <tr>
+                                  <td class="colspan=6">
+                               <a  (click)="addnewproduct()" class="btn btn-primary"><button class="bg-blue-200 w-20">ንብረቱን ያስገቡ</button></a>
+                                  </td>
+                              </tr>
+                           </tfoot>
+                   </table>      
+                  </div>
+              </div>
+              <br>
+              <div class="row">
+                  <div class="flex space-x-24">
+                      
+      
+      <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-40 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        <option selected> የተላለፈበት ምክንያት</option>
+        <option value="US">ዝዉውር</option>
+        <option value="CA">ስራ በማቆም </option>
+        <option value="FR">ሌላ ምክንያ</option>
+        <option value="DE">ዝዉውር</option>
+      </select>
+      
+                      <!-- <div class="flex space-x-6">
+                          <label class="">Total</label> 
+                          <input formControlName="total" placeholder="Total" class="form-control  outline-none border px-3 py-1 bg-gray-200"/>
+                      </div> -->
+                      <div class="fl space-x-5">
+                          <label class="space-x-3"> የተላለፈበትቀን</label> 
+                          <input type="date" formControlName=" DateofTransfer" class="form-control outline-none border px-3 py-1 bg-gray-200">
+                      </div>
+                  </div> 
+              </div>
+             
+              <div class="col-lg-12 justify-center items-center" >
+                  <br>
+                  <button class="items-center bg-blue-50" type="submit">አጠናቅ</button>
+                  <button class="mx-20 bg-red-500" type="reset" (click)="onReset()">ይሰርዙ</button>
+              </div>
+          </div>
+      </div>
+      </form>
+</div>

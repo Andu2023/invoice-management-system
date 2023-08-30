@@ -1,0 +1,91 @@
+<mat-stepper class="" [linear]="isLinear" #stepper>
+  <form class="" [formGroup]="Empregister">
+  <mat-step >
+    <div formGroupName="basic">
+      <ng-template matStepLabel>Fill out your name</ng-template>
+      <mat-form-field>
+        <mat-label>fName</mat-label>
+        <input matInput placeholder="Last name, First name" formControlName="fname" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>lName</mat-label>
+        <input matInput placeholder="Last name, First name" formControlName="lname" required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </div>
+  </mat-step>
+  <mat-step  label="Fill out your contact">
+    <div formGroupName="contact">
+      <mat-form-field>
+        <mat-label>email</mat-label>
+        <input matInput formControlName="email" placeholder="Ex. 1 Main St, New York, NY"
+               required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>phone</mat-label>
+        <input matInput formControlName="phone" placeholder="Ex. 1 Main St, New York, NY"
+               required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>fax</mat-label>
+        <input matInput formControlName="fax" placeholder="Ex. 1 Main St, New York, NY"
+               required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </div>
+  </mat-step>
+  <mat-step  label="Fill out your contact">
+    <div formGroupName="contact">
+      <mat-form-field>
+        <mat-label>email</mat-label>
+        <input matInput formControlName="email" placeholder="Ex. 1 Main St, New York, NY"
+               required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>phone</mat-label>
+        <input matInput formControlName="phone" placeholder="Ex. 1 Main St, New York, NY"
+               required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>fax</mat-label>
+        <input matInput formControlName="fax" placeholder="Ex. 1 Main St, New York, NY"
+               required>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </div>
+  </mat-step>
+  <mat-step label="Fill out your address">
+    <div formGroupName="address">
+     <mat-form-field>
+        <mat-label>pin</mat-label>
+        <input matInput formControlName="pin" placeholder="Ex. 1 Main St, New York, NY"
+               required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>streat</mat-label>
+        <input matInput formControlName="streat" placeholder="Ex. 1 Main St, New York, NY"
+               required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>city</mat-label>
+        <input matInput formControlName="city" placeholder="Ex. 1 Main St, New York, NY"
+               required>
+      </mat-form-field>
+    <ng-template matStepLabel>Done</ng-template>
+    <p>You are now done.</p>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <!-- <button mat-button (click)="stepper.reset()">Reset</button> -->
+    </div>
+  </div>
+  </mat-step>
+</form>
+</mat-stepper>

@@ -1,0 +1,82 @@
+
+<form class="emp" [formGroup]="Empform">
+<div class="h-200 bg-white ">
+  <div class="items-center justify-center ml-60 mb-8 p-14">
+      <h3 class="">{{pagetitle}}</h3>
+  </div>
+  <div class="sub flex grid-cols-2">
+      <div class="reciv w-6/12 pl-20">
+          <table>
+              <tr class="flex grid-cols-2">
+                  <td class="w-6/12"><label>ስም</label></td>
+                  <td class="w-6/12"> <input placeholder=" " formControlName="name"
+                          class="form-control outline-none border px-3 py-1 bg-gray-50 mb-2">
+                  </td>
+              </tr>
+              <tr class="flex grid-cols-2">
+                  <td class="w-6/12"> <label> የአባትስም</label></td>
+                  <td class="w-6/12"> <input formControlName="midleName" placeholder=""
+                          class="form-control outline-none border px-3 py-1 bg-gray-50 mb-2 ">
+                  </td>
+              </tr>
+              <tr class="flex grid-cols-2">
+                  <td class="w-6/12"> <label> የአባትስም</label></td>
+                  <td class="w-6/12"> <input formControlName="lastName" placeholder=""
+                          class="form-control outline-none border px-3 py-1 bg-gray-50 mb-2">
+                  </td>
+              </tr>
+              <tr class="flex grid-cols-2">
+                  <td class="w-6/12"><label>መታወቅያ.ቁ</label></td>
+                  <td class="w-6/12"> <input placeholder=" " formControlName="fId"
+                          class=" mb-2 form-control outline-none border px-3 py-1  bg-gray-50 ">
+                  </td>
+              </tr>
+          </table>
+      </div>
+      <div class="reciv w-6/12">
+          <table>
+
+              <tr class="flex grid-cols-2">
+                  <td class="w-6/12"><label>ስልክ.ቁ</label></td>
+                  <td class="w-6/12"> <input type="" formControlName="phoneno"
+                          class="form-control outline-none border px-3 py-1 bg-gray-50 mb-2 w-40">
+                  </td>
+              </tr>
+              <tr class="flex grid-cols-2">
+                  <td class="w-6/12"> <label> ፆታ</label></td>
+                  <td class="w-6/12"> <select id="countries" formControlName="gender"
+                          class="mb-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-40 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                          <option selected> </option>
+                          <option value=""> ወንድ</option>
+                          <option value="US">ሴት</option>
+
+                      </select> </td>
+              </tr>
+              <tr class="flex grid-cols-2">
+                  <td class="w-6/12"> <label>ማዕርግ</label></td>
+                  <td class="w-6/12"> <select formControlName="level" 
+                          class="mb-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-40 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                          <option selected> </option>
+                          <option value="US">ኮሚሽነር</option>
+                          <option value="CA">ም/ኮሚሽነር </option>
+                          <option value="FR">ኢ/ፔክተር</option>
+                          <option value="DE">ም/ኢ/ፔክተር</option>
+                      </select> </td>
+              </tr>
+              <tr class="flex grid-cols-2">
+                  <td class="w-6/12"> <label>የስራክፍል</label></td>
+                  <td class="w-6/12"><select  formControlName="departmnt"
+                          class="mb-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-40 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                          <option selected></option>
+                          <option value="US">ሲስተም</option>
+                          <option value="CA">ኒትወርክ </option>
+                          <option value="FR">መታወቂያ</option>
+                         
+                      </select> </td>
+              </tr>
+          </table>
+      </div>
+  </div>
+  <button class="submit" type="submit">አስገባ</button>
+</div>
+</form>
