@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Book, CategoryBooks } from '../../model/model';
+import { ImportServiceService } from 'src/app/fixed/services/import-service.service';
+import { MatSort } from '@angular/material/sort';
 
 @Component({
   selector: 'app-view-all-material',
@@ -12,16 +14,16 @@ export class ViewAllMaterialComponent implements OnInit {
   // booksToDisplay:CatagoryBooks[]=[];
   displayColums:string[]=["productName","productCode","productModel","qty","salesPrice","total"];
  
-  constructor() { 
+  constructor(private service:ImportServiceService) { 
   
   }
   ngOnInit(): void {
     this.LoadProduct();
   }
   LoadProduct(){
-    // this.service.GetAllInvoicedetials().subscribe(resp=>{
-    //   this.productdata=resp;
-    // })
+    this.service.AllProducts().subscribe(resp=>{
+      this.productdata=resp;
+    })
   }
 
 EditProduct(code:any){

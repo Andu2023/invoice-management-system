@@ -15,6 +15,8 @@ import { MaterialModule } from '../Material/MaterialModule';
 import { ReturnedMaterialComponent } from './components/returned-material/returned-material.component';
 import { AllOrdersComponent } from './components/all-orders/all-orders.component';
 import { ViewAllMaterialComponent } from './components/view-all-material/view-all-material.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -35,7 +37,10 @@ import { ViewAllMaterialComponent } from './components/view-all-material/view-al
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    MaterialModule
+    MaterialModule,
+   ReactiveFormsModule,
+   ReactiveFormsModule,
+    HttpClientModule
   ]
 })
 export class DashboardModule { }
