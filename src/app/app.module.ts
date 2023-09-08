@@ -14,6 +14,7 @@ import { MaterialModule } from './Material/MaterialModule';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { MatStepperModule } from '@angular/material/stepper';
 import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
 
 
 @NgModule({
@@ -33,7 +34,7 @@ import { HttpClientModule } from '@angular/common/http';
     AuthModule,
     AdminModule,
     HttpClientModule,
-    
+    ToastrModule,
   DashboardModule,
   MatStepperModule
 

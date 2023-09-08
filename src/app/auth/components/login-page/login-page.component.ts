@@ -38,7 +38,7 @@ this.isText?this.type="text":this.type="password";
        this.service.login(this.loginForm.value)
        .subscribe({
         next: (res) => {
-          alert(res.message);
+          //alert(res.message);
           this.loginForm.reset();
           this.router.navigate(['home'])
         },

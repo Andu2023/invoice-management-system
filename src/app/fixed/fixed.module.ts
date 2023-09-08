@@ -15,6 +15,7 @@ import { WithdroalForEmployeeComponent } from './components/withdroal-for-employ
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { ToastrModule } from 'ngx-toastr/public_api';
 
 
 
@@ -37,7 +38,8 @@ import { MatButtonModule } from '@angular/material/button';
     MaterialModule,
     MatStepperModule,
     MatInputModule ,
-    MatButtonModule
+    MatButtonModule,
+    ToastrModule
   ]
 })
 export class FixedModule { }

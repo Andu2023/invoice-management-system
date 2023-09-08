@@ -7,7 +7,7 @@ const routes: Routes = [
     path:'home',
     component:HomePageComponent ,
   },
-  //{ path: '**',  redirectTo: 'home', pathMatch: 'full'}
+  // { path: '**',  redirectTo: '/auth/login', pathMatch: 'full'}
 ];
 
 @NgModule({

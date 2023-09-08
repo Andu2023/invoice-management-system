@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { ImportServiceService } from '../../services/import-service.service';
+import { NotificationService } from '../../services/notification.service';
 
 @Component({
   selector: 'app-import-forms',
@@ -16,8 +18,9 @@ export class ImportFormsComponent  implements OnInit {
   mastercustomer: any;
   masterproduct: any;
 constructor(private builder:FormBuilder,public dialogref:MatDialogRef<ImportFormsComponent>,
- 
+  private service:ImportServiceService,
   private router:Router,
+  private toastr:toastService
   ){}
 ngOnInit(): void {
   this.GetCustomers();
@@ -37,7 +40,7 @@ Gebiform=this.builder.group({
         deliveryAddress:this.builder.control('', Validators.required),
         deliverysName:this.builder.control('',Validators.required),
         deliveryId:this.builder.control('', Validators.required),
-        details:this.builder.array([])    
+        detials:this.builder.array([])    
        
        
       
@@ -51,28 +54,29 @@ onReset() {
 }
 
 SaveInvoice() {
-  // console.log(this.Gebiform.value) 
-  // this.service.SaveInvoice(this.Gebiform.getRawValue()).subscribe(res => {
-  //   let result: any;
-  //   result = res;
-  //   if (result.result == 'pass') {
-  //   alert("created succesfully");
+  console.log(this.Gebiform.value) 
+  this.service.SaveProducts(this.Gebiform.getRawValue()).subscribe(res => {
+    let result: any;
+    result = res;
+    if (result.result == 'pass') {
+    //alert("created succesfully");
+    this.toast.showsucsess('fjsfsjfj','whhshhsd');
     
-  //   }
+    }
       
-  //   });  
+    });  
 
 }
 
 addnewproduct() {
-  this.Indetials=this.Gebiform.get("details") as FormArray;
+  this.Indetials=this.Gebiform.get("detials") as FormArray;
 
   
     this.Indetials.push(this.Generaterow());
   } 
 
 get Gebeproduct(){
-  return this.Gebiform.get("details") as FormArray;
+  return this.Gebiform.get("detials") as FormArray;
 }
 Generaterow(){
   return this.builder.group({
@@ -100,14 +104,14 @@ GetProducts() {
 // 
 }
 productchange(index: any){
-  this.Indetials = this.Gebiform.get("details") as FormArray;
+  this.Indetials = this.Gebiform.get("detials") as FormArray;
   this.invoiceproduct = this.Indetials.at(index) as FormGroup;
   
   
   this.Itemcalculation(index);  
 }
 Itemcalculation(index: any) {
-  this.Indetials = this.Gebiform.get("details") as FormArray;
+  this.Indetials = this.Gebiform.get("detials") as FormArray;
   this.invoiceproduct = this.Indetials.at(index) as FormGroup;
   let  Quantity = this.invoiceproduct.get("qty")?.value;
   let Price = this.invoiceproduct.get("salesPrice")?.value;
@@ -117,7 +121,7 @@ Itemcalculation(index: any) {
   this.summarycalculation();
 }
 summarycalculation() {
-  let array = this.Gebiform.getRawValue().details;
+  let array = this.Gebiform.getRawValue().detials;
   let sumtotal = 0
   array.forEach((x: any) => {
     sumtotal = sumtotal + x.total;
