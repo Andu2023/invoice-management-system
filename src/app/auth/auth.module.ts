@@ -9,6 +9,7 @@ import { TransferFormComponent } from './components/transfer-form/transfer-form.
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginSwiperComponent } from './component/login-swiper/login-swiper.component';
 
 
 @NgModule({
@@ -17,13 +18,15 @@ import { HttpClientModule } from '@angular/common/http';
   
 
     TransferFormComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    LoginSwiperComponent
   ],
   imports: [
     CommonModule,
     AuthRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ]
 })
 export class AuthModule { }

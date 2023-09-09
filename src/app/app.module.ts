@@ -15,6 +15,7 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { MatStepperModule } from '@angular/material/stepper';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
+import { SwiperComponent } from './swiper/swiper.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { ToastrModule } from 'ngx-toastr';
     HeaderPageComponent,
     FooterPageComponent,
     HomePageComponent,
+    SwiperComponent,
    
   ],
   imports: [
@@ -36,7 +38,9 @@ import { ToastrModule } from 'ngx-toastr';
     HttpClientModule,
     ToastrModule,
   DashboardModule,
-  MatStepperModule
+  MatStepperModule,
+
+  
 
   ],
   providers: [],

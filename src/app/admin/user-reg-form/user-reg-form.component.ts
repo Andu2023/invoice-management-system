@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthServiceService } from 'src/app/auth/Services/auth-service.service';
 import ValidateForm from 'src/app/helper/validateForms';
+import { AdimnServiceService } from '../adimn-service.service';
 
 
 @Component({
@@ -17,7 +18,7 @@ export class UserRegFormComponent implements OnInit{
   showPassword: boolean = false;
 signupForm!: FormGroup;
 constructor(private formBuilder: FormBuilder, private router:Router,
- private service:AuthServiceService ) {}
+ private service:AdimnServiceService ) {}
 ngOnInit(): void {   
   this.signupForm =this.formBuilder.group({
   firstName:['',Validators.required],  
