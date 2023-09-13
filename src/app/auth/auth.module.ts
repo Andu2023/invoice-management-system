@@ -10,6 +10,7 @@ import { LoginPageComponent } from './components/login-page/login-page.component
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginSwiperComponent } from './component/login-swiper/login-swiper.component';
+import { NgToastModule } from 'ng-angular-popup';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { LoginSwiperComponent } from './component/login-swiper/login-swiper.comp
     AuthRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgToastModule
     
   ]
 })

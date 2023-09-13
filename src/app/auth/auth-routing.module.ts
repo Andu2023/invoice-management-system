@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthComponent } from './auth.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { LoginSwiperComponent } from './component/login-swiper/login-swiper.component';
+import { AuthGuard } from '../guards/auth.guard';
 
 const routes: Routes = [
   { path: 'auth', component:AuthComponent,

@@ -16,6 +16,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { SwiperComponent } from './swiper/swiper.component';
+import { NgToastModule } from 'ng-angular-popup';
 
 
 @NgModule({
@@ -36,7 +37,7 @@ import { SwiperComponent } from './swiper/swiper.component';
     AuthModule,
     AdminModule,
     HttpClientModule,
-    ToastrModule,
+  
   DashboardModule,
   MatStepperModule,
 

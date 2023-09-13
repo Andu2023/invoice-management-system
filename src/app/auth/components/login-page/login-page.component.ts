@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import ValidateForm from 'src/app/helper/validateForms';
 import { AuthServiceService } from '../../Services/auth-service.service';
+import { NgToastService } from 'ng-angular-popup';
 
 
 @Component({
@@ -17,7 +18,7 @@ export class LoginPageComponent  implements OnInit{
   showPassword: boolean = false;
  loginForm!: FormGroup;
    constructor(private formBuilder: FormBuilder,private router:Router,
-    private service:AuthServiceService) {  }
+    private service:AuthServiceService,private toast:NgToastService) {  }
   ngOnInit(): void {
      this.loginForm =this.formBuilder.group({
       userName:['',Validators.required],
@@ -39,11 +40,12 @@ this.isText?this.type="text":this.type="password";
        .subscribe({
         next: (res) => {
           //alert(res.message);
+          this.toast.success({detail:"success message", summary:res.message,duration:2000})
           this.loginForm.reset();
           this.router.navigate(['home'])
         },
         error:(err)=>{
-          alert(err?.error.message)
+          this.toast.error({detail:"Error Message", summary:"invalid username or password",duration:4000})
          }
       })
       }

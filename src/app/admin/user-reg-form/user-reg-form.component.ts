@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { AuthServiceService } from 'src/app/auth/Services/auth-service.service';
 import ValidateForm from 'src/app/helper/validateForms';
 import { AdimnServiceService } from '../adimn-service.service';
+import { NgToastService } from 'ng-angular-popup';
 
 
 @Component({
@@ -18,7 +19,7 @@ export class UserRegFormComponent implements OnInit{
   showPassword: boolean = false;
 signupForm!: FormGroup;
 constructor(private formBuilder: FormBuilder, private router:Router,
- private service:AdimnServiceService ) {}
+ private service:AdimnServiceService,private toast:NgToastService ) {}
 ngOnInit(): void {   
   this.signupForm =this.formBuilder.group({
   firstName:['',Validators.required],  
@@ -52,18 +53,19 @@ ngOnInit(): void {
               }
                this.service.signUp(signUpObj).subscribe({
                 next:(res => {
-                  alert(res.message);
+                  //alert(res.message);
+                  this.toast.success({detail:"Success message", summary:res.message,duration:3000})
                   this.signupForm.reset();
                   // this.router.navigate(['user'])
                 }),
                 error:(err=>{
-                  alert(err?.error.message)
-                 })
+                 
+                  this.toast.error({detail:"Eror message", summary:"invalid form please try agin",duration:3000}) })
               })
             }
             else{
               ValidateForm.validateAllFormFields(this.signupForm); 
-              alert("invalid form")
+              this.toast.error({detail:"Eror message", summary:"invalid form please try agin",duration:3000})
             }
         }
 }

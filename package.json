@@ -21,6 +21,7 @@
     "@angular/platform-browser-dynamic": "^16.1.0",
     "@angular/router": "^16.1.0",
     "chart.js": "^4.4.0",
+    "ng-angular-popup": "^0.4.7",
     "ngx-toastr": "^17.0.2",
     "rxjs": "~7.8.0",
     "swiper": "^10.2.0",

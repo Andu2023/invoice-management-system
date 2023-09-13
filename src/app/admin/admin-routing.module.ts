@@ -7,6 +7,7 @@ import { AdminCompontesComponent } from './admin-compontes/admin-compontes.compo
 import { UserPageComponent } from './user-page/user-page.component';
 import { UserListPageComponent } from './user-list-page/user-list-page.component';
 import { EmployeListPageComponent } from './employe-list-page/employe-list-page.component';
+import { AuthGuard } from '../guards/auth.guard';
 
 const routes: Routes = [
   { path: 'admin', component:AdminCompontesComponent,

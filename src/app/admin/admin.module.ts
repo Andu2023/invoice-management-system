@@ -14,6 +14,7 @@ import { AdminMainComponent } from './admin-main/admin-main.component';
 import { MaterialModule } from '../Material/MaterialModule';
 import { AdminCompontesComponent } from './admin-compontes/admin-compontes.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NgToastModule } from 'ng-angular-popup';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { HttpClientModule } from '@angular/common/http';
     AdminRoutingModule,
     ReactiveFormsModule, 
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    NgToastModule
   ]
 })
 export class AdminModule { }
