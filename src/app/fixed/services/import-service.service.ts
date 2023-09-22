@@ -23,5 +23,8 @@ GetAllImportHeaders(){ return this.http.get('http://localhost:5252/api/Import/Ge
 // RemoveInvoice(invoiceno:any){ return this.http.delete('https://localhost:7068/Invoice/Remove?InvoiceNo='+invoiceno);}
  SaveProducts(invoicedata:any){ return this.http.post('http://localhost:5252/api/Import/Save',invoicedata );
 }
+addEmployee(invoicedata:any){ return this.http.post('http://localhost:5252/api/Employee/AddEmployee',invoicedata );
+}
+employee(){ return this.http.get('http://localhost:5252/api/Employee/GetAll');}
 
 }

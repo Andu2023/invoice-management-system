@@ -1,0 +1,10 @@
+table{
+  width: 100%;
+  border: 1px solid rgba(62, 15, 129, 0.1);
+
+  .mat-cell,
+  .mat-header-cell{
+font-size: 1.2rem;
+  }
+
+}

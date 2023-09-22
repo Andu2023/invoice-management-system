@@ -1,5 +1,5 @@
 
-<form class="emp" [formGroup]="Empform">
+<form class="emp" [formGroup]="Empform"  (ngSubmit)="SaveEmployee()">
 <div class="h-200 bg-white ">
   <div class="items-center justify-center ml-60 mb-8 p-14">
       <h3 class="">{{pagetitle}}</h3>
@@ -47,8 +47,8 @@
                   <td class="w-6/12"> <select id="countries" formControlName="gender"
                           class="mb-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-40 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                           <option selected> </option>
-                          <option value=""> ወንድ</option>
-                          <option value="US">ሴት</option>
+                          <option value="ወንድ"> ወንድ</option>
+                          <option value="ሴት">ሴት</option>
 
                       </select> </td>
               </tr>
@@ -57,10 +57,10 @@
                   <td class="w-6/12"> <select formControlName="level" 
                           class="mb-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-40 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                           <option selected> </option>
-                          <option value="US">ኮሚሽነር</option>
-                          <option value="CA">ም/ኮሚሽነር </option>
-                          <option value="FR">ኢ/ፔክተር</option>
-                          <option value="DE">ም/ኢ/ፔክተር</option>
+                          <option value="ኮሚሽነር">ኮሚሽነር</option>
+                          <option value="ም/ኮሚሽነር">ም/ኮሚሽነር </option>
+                          <option value="ኢ/ፔክተር">ኢ/ፔክተር</option>
+                          <option value="ም/ኢ/ፔክተር">ም/ኢ/ፔክተር</option>
                       </select> </td>
               </tr>
               <tr class="flex grid-cols-2">
@@ -68,9 +68,9 @@
                   <td class="w-6/12"><select  formControlName="departmnt"
                           class="mb-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-40 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                           <option selected></option>
-                          <option value="US">ሲስተም</option>
-                          <option value="CA">ኒትወርክ </option>
-                          <option value="FR">መታወቂያ</option>
+                          <option value="ሲስተም">ሲስተም</option>
+                          <option value="ኒትወርክ "></option>
+                          <option value="መታወቂያ"></option>
                          
                       </select> </td>
               </tr>

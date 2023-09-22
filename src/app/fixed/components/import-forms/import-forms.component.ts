@@ -3,6 +3,7 @@ import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { ImportServiceService } from '../../services/import-service.service';
+import { NgToastService } from 'ng-angular-popup';
 
 
 @Component({
@@ -20,7 +21,7 @@ export class ImportFormsComponent  implements OnInit {
 constructor(private builder:FormBuilder,public dialogref:MatDialogRef<ImportFormsComponent>,
   private service:ImportServiceService,
   private router:Router,
- 
+ private toast:NgToastService
   ){}
 ngOnInit(): void {
   this.GetCustomers();
@@ -59,9 +60,8 @@ SaveInvoice() {
     let result: any;
     result = res;
     if (result.result == 'pass') {
-    //alert("created succesfully");
-    //this.toast.showsucsess('fjsfsjfj','whhshhsd');
     
+    this.toast.success({detail:"success message", summary:"Stored SuccessFully !",duration:2000})
     }
       
     });  

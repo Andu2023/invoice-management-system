@@ -50,10 +50,11 @@ this.isText?this.type="text":this.type="password";
       })
       }
         
-    // else{
+    else{
      
-    //   ValidateForm.validateAllFormFields(this.loginForm);
-    //    alert("invalid form");
-    // }   
+      ValidateForm.validateAllFormFields(this.loginForm);
+      this.toast.error({detail:"Eror message", summary:"invalid form please try agin",duration:3000})
+     
+    }   
     }
   }

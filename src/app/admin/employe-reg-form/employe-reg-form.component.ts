@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ImportServiceService } from 'src/app/fixed/services/import-service.service';
 
 @Component({
   selector: 'app-employe-reg-form',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class EmployeRegFormComponent  implements OnInit {
   pagetitle="የሰራተኛ መረጃ መመዝገቢያ ቅጽ";
-  constructor(private builder: FormBuilder, private router:Router){}
+  constructor(private builder: FormBuilder, private router:Router,private service:ImportServiceService){}
 ngOnInit(): void {
  
 }
@@ -25,12 +26,12 @@ ngOnInit(): void {
       });
 SaveEmployee(){
   console.log(this.Empform.value) 
-  // this.service.SaveEmployee(this.Empform.getRawValue()).subscribe(res => {
-  //   let result: any;
-  //   result = res;
+  this.service.addEmployee(this.Empform.getRawValue()).subscribe(res => {
+    let result: any;
+    result = res;
    
       
-  //   });  
+    });  
 
 }
 }
