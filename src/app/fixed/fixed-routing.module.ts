@@ -7,6 +7,7 @@ import { TransferPageComponent } from './components/transfer-page/transfer-page.
 import { ImportpagesComponent } from './components/importpages/importpages.component';
 import { ImportFormsComponent } from './components/import-forms/import-forms.component';
 import { WithdroalForEmployeeComponent } from './components/withdroal-for-employee/withdroal-for-employee.component';
+import { ForEmployeeComponent } from './components/for-employee/for-employee.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
       // {path: 'transfer', component:TransferFormComponent },
       {path: 'transferpage', component:TransferPageComponent },  
       {path: 'emp', component:WithdroalForEmployeeComponent }, 
+      {path: 'foremp', component:ForEmployeeComponent }, 
     ]
   }
 ];

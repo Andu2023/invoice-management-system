@@ -38,9 +38,7 @@
         margin-right: 70px;
     }
     .container-fluid{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+     background-color: #0c2a4c;
     }
     .header-contaner{
         position:relative;
@@ -116,7 +114,9 @@
         height: 90px;
     } */
 
-
+    /* .container-fluid{
+        background-color: #0c2a4c;
+       } */
 
 
     nav .navbar .nav-links .links{

@@ -15,6 +15,8 @@ import { WithdroalForEmployeeComponent } from './components/withdroal-for-employ
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { ForEmployeeComponent } from './components/for-employee/for-employee.component';
+import { ForDepartmntComponent } from './components/for-departmnt/for-departmnt.component';
 
 
 
@@ -29,7 +31,9 @@ import { MatButtonModule } from '@angular/material/button';
  
     ImportFormsComponent,
     ImportpagesComponent,
-    WithdroalForEmployeeComponent
+    WithdroalForEmployeeComponent,
+    ForEmployeeComponent,
+    ForDepartmntComponent
   ],
   imports: [
     CommonModule,
