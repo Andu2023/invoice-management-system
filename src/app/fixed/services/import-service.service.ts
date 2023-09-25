@@ -26,5 +26,7 @@ GetAllImportHeaders(){ return this.http.get('http://localhost:5252/api/Import/Ge
 addEmployee(invoicedata:any){ return this.http.post('http://localhost:5252/api/Employee/AddEmployee',invoicedata );
 }
 employee(){ return this.http.get('http://localhost:5252/api/Employee/GetAll');}
+withdroal(invoicedata:any){ return this.http.post('http://localhost:5252/api/catagory/decrease-quantity?',invoicedata );
+}
 
 }
