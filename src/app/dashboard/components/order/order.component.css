@@ -1,0 +1,15 @@
+/* form{
+  width:60px;
+  display:flex;
+  
+} */
+.all{
+  height:690px;
+}
+input{
+  width:160px;
+  display:flex;
+}
+.body{
+  display:flex;
+}

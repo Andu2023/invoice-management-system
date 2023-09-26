@@ -1,36 +1,4 @@
-<!-- <div class="card ml-32 pt-20 bg-white  ">
-    
-    <div class="card-header">
-        <h3>List of users</h3>
-        <a class="btn btn-success" routerLink="/register">Add User [+]</a>
-    </div>
-<div class="card-body">
-    <table class="table table-bordered">
-        <thead class="bg-dark text-black bg-gray-200">
-            <tr>
-                <td class="px-6 py-3">firstName</td>
-                <td class="px-6 py-3">lastName</td>
-                <td class="px-6 py-3">userName</td>
-                <td class="px-6 py-3">email</td>
-                <td class="px-6 py-3"> password</td>
-               
-                
-        </thead>
-        <tbody>
-<tr *ngFor="let item of adduser">
-    <td class="px-6 py-3">{{item.firstName}}</td>
-    <td class="px-6 py-3">{{item.lastName}}</td>
-    <td class="px-6 py-3">{{item.userName}}</td>
-    <td class="px-6 py-3">{{item. email}}</td>
-    <td class="px-6 py-3">{{item. password}}</td>
-    
 
-</tr>
-        </tbody>
-    </table>
-
-</div>
-</div> -->
 <div class="mat-elevation-z8 p-14">
   <table class="mat-elevation-z8" mat-table matSort [dataSource]="UserData" >
       <ng-container matColumnDef="firstName">

@@ -8,6 +8,7 @@ import { ImportpagesComponent } from './components/importpages/importpages.compo
 import { ImportFormsComponent } from './components/import-forms/import-forms.component';
 import { WithdroalForEmployeeComponent } from './components/withdroal-for-employee/withdroal-for-employee.component';
 import { ForEmployeeComponent } from './components/for-employee/for-employee.component';
+import { OrderComponent } from '../dashboard/components/order/order.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
       {path: 'transferpage', component:TransferPageComponent },  
       {path: 'emp', component:WithdroalForEmployeeComponent }, 
       {path: 'foremp', component:ForEmployeeComponent }, 
+      {path: 'order', component:OrderComponent }, 
     ]
   }
 ];

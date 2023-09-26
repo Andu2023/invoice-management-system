@@ -18,9 +18,7 @@ export class ForEmployeeComponent implements OnInit {
     productCode:this.builder.control('',Validators.required),
     quantity:this.builder.control ('', Validators.required),
     fId:this.builder.control('', Validators.required),
- 
-         
-        
+    
   });
   onclose(){
     this.dialogref.close(); 
@@ -30,10 +28,10 @@ export class ForEmployeeComponent implements OnInit {
     this.service.withdroal(this.withdroalform.getRawValue()).subscribe(res => {
       let result: any;
       result = res;
-      if (result.result == 'Product quantity decreased.') {
+      // if (result.result == 'Product quantity decreased.') {
       
-      this.toast.success({detail:"success message", summary:"Stored SuccessFully !",duration:2000})
-      }
+      // this.toast.success({detail:"success message", summary:"Stored SuccessFully !",duration:2000})
+      // }
         
       });  
   

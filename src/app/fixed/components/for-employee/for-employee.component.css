@@ -63,13 +63,7 @@ form{
 label{
   font-weight: 500;
 }
-.trans .col-lg-6{
-  padding-left:60px;
-}
 
-  .reciv .col-lg-6{
-  padding-left:70px;
-} 
 input{
    border-radius: 3px;
 }
@@ -96,6 +90,7 @@ border: black;
 button{
   border-radius: 5px;
   color: black;
+  margin-right:30px;
  
 }
 mat-icon{
@@ -120,8 +115,7 @@ mat-toolbar{
 
 }
 h3{
-  margin-left: 260px;
-  padding: 10px;
+  
 }
 .save{
   padding-left: 270px;

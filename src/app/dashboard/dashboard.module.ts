@@ -17,6 +17,8 @@ import { AllOrdersComponent } from './components/all-orders/all-orders.component
 import { ViewAllMaterialComponent } from './components/view-all-material/view-all-material.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { OrderComponent } from './components/order/order.component';
+import { NgToastModule } from 'ng-angular-popup';
 
 
 @NgModule({
@@ -32,14 +34,15 @@ import { HttpClientModule } from '@angular/common/http';
     CommonDeviceComponent,
     ReturnedMaterialComponent,
     AllOrdersComponent,
-    ViewAllMaterialComponent
+    ViewAllMaterialComponent,
+    OrderComponent
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     MaterialModule,
    ReactiveFormsModule,
-   ReactiveFormsModule,
+   NgToastModule,
     HttpClientModule
   ]
 })

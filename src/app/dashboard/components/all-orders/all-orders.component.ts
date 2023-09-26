@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Order } from '../../model/model';
+import { ImportServiceService } from 'src/app/fixed/services/import-service.service';
 
 @Component({
   selector: 'app-all-orders',
@@ -7,41 +8,21 @@ import { Order } from '../../model/model';
   styleUrls: ['./all-orders.component.css']
 })
 export class AllOrdersComponent  implements OnInit {
-  listOfOrders: Order[] = [];
-  ordersToDisplay: Order[] = [];
-  columns: string[] = [
-    'id',
-    'userid',
-    'name',
-    'bookid',
-    'book',
-    'date',
-    'returned',
-  ];
-
-  constructor() {}
-
+  ordersToDisplay:any;
+  
+  displayColums:string[]=["employeeName","employeeDepartmnt","productDescription","productName","orderDate"];
+  constructor(private service:ImportServiceService) { }
   ngOnInit(): void {
-    // this.api.getAllOrders().subscribe({
-    //   next: (res: Order[]) => {
-    //     this.listOfOrders = res;
-    //     this.ordersToDisplay = this.listOfOrders;
-    //   },
-    //   error: (err: any) => console.log(err),
-    // });
+    this.getOrder();
+  }
+  getOrder() {
+    this.service.Allorders().subscribe(res => {
+      this.ordersToDisplay = res;
+    });
+  }
+  EditProduct(code:any){
+    // this.router.navigate(['product/edit/'+code])
   }
 
-  filter(value: string) {
-    if (value === 'all') {
-      this.ordersToDisplay = this.listOfOrders.filter((value) => value);
-    } else if (value === 'pen') {
-      this.ordersToDisplay = this.listOfOrders.filter(
-        (value) => value.returned == false
-      );
-    } else {
-      this.ordersToDisplay = this.listOfOrders.filter(
-        (value) => value.returned
-      );
-    }
-  }
+  
 }

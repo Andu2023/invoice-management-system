@@ -1,0 +1,48 @@
+<div class="all">
+  <div class="panel-heading ">
+    <h3 class="pt-3 font-weight-bold text-blue-700 ">Order Form</h3>
+</div>
+<div class="panel-body bg-gray-50  p-3 ml-60 h-48 mr-20">
+    <form   [formGroup]="orderForm" (ngSubmit)="onSubmit()" >
+        <div class="body mb-10 ">
+          <div class="form-group pt-3 mr-5">
+          <label for="">EmployeName</label>
+            <div class="iput-fild"  [class.error]="orderForm.controls['employeeName'].dirty && orderForm.hasError('required','employeeName')">
+              <span class="fa fa-user p-2"> </span>
+                  <input formControlName="employeeName" type="text"placeholder="employeeName">
+            </div>
+        </div>
+        <small  *ngIf="orderForm.controls['employeeName'].dirty && orderForm.hasError('required','employeeName')" class="text-danger"> *employeeName is required</small>
+        <div class="form-group pt-3 mr-5">
+          <label for="">EmployeDepartmnt</label>
+          <div class="iput-fild"  [class.error]="orderForm.controls['employeeDepartmnt'].dirty && orderForm.hasError('required','employeeDepartmnt')">
+                
+                <input formControlName="employeeDepartmnt" type="text"placeholder="employeeDepartmnt">
+          </div>
+      </div>
+      <small  *ngIf="orderForm.controls['employeeDepartmnt'].dirty && orderForm.hasError('required','employeeDepartmnt')" class="text-danger"> *employeeDepartmnt is required</small>
+      <div class="form-group pt-3 mr-5">
+        <label for="">Order Description</label>
+        <div class="iput-fild"  [class.error]="orderForm.controls['productDescription'].dirty && orderForm.hasError('required','productDescription')">
+            
+              <input formControlName="productDescription" type="text"placeholder="productDescription">
+        </div>
+    </div>
+    <small  *ngIf="orderForm.controls['productDescription'].dirty && orderForm.hasError('required','productDescription')" class="text-danger"> *productDescription is required</small>
+    <div class="form-group pt-3">
+      <label for="">ProductName</label>
+      <div class="iput-fild"  [class.error]="orderForm.controls['productName'].dirty && orderForm.hasError('required','productName')">
+            
+            <input formControlName="productName" type="text"placeholder="productName">
+      </div>
+  </div>
+  <small  *ngIf="orderForm.controls['productName'].dirty && orderForm.hasError('required','productName')" class="text-danger"> *productName is required</small>
+  
+        </div>
+      
+<button type="submit" class=" pl-60 text-blue-700">Send Order</button>
+       
+    </form>
+</div>
+
+</div>
