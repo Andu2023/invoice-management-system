@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NgToastService } from 'ng-angular-popup';
 import { ImportServiceService } from 'src/app/fixed/services/import-service.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { ImportServiceService } from 'src/app/fixed/services/import-service.serv
 })
 export class EmployeRegFormComponent  implements OnInit {
   pagetitle="የሰራተኛ መረጃ መመዝገቢያ ቅጽ";
-  constructor(private builder: FormBuilder, private router:Router,private service:ImportServiceService){}
+  constructor(private builder: FormBuilder, private router:Router,private service:ImportServiceService, private toast:NgToastService){}
 ngOnInit(): void {
  
 }
@@ -29,7 +30,12 @@ SaveEmployee(){
   this.service.addEmployee(this.Empform.getRawValue()).subscribe(res => {
     let result: any;
     result = res;
-   
+   if(result.result=='pass'){
+    this.toast.success({detail:"Message", summary:"Register SuccessFully !!",duration:2000})
+   }
+   else{
+    this.toast.error({detail:"Eror Message", summary:"Invalid form please try agin",duration:3000})
+   }
       
     });  
 

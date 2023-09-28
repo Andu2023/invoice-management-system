@@ -40,12 +40,12 @@ this.isText?this.type="text":this.type="password";
        .subscribe({
         next: (res) => {
           //alert(res.message);
-          this.toast.success({detail:"success message", summary:res.message,duration:2000})
+          this.toast.success({detail:" Message", summary:res.message,duration:2000})
           this.loginForm.reset();
           this.router.navigate(['home'])
         },
         error:(err)=>{
-          this.toast.error({detail:"Error Message", summary:"invalid username or password",duration:4000})
+          this.toast.error({detail:"Message", summary:"Invalid username or password",duration:4000})
          }
       })
       }
@@ -53,7 +53,7 @@ this.isText?this.type="text":this.type="password";
     else{
      
       ValidateForm.validateAllFormFields(this.loginForm);
-      this.toast.error({detail:"Eror message", summary:"invalid form please try agin",duration:3000})
+      this.toast.error({detail:"Message", summary:"Invalid form please try agin",duration:3000})
      
     }   
     }

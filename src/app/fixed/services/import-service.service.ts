@@ -17,8 +17,8 @@ addEmployee(invoicedata:any){ return this.http.post('http://localhost:5252/api/E
 employee(){ return this.http.get('http://localhost:5252/api/Employee/GetAll');}
 withdroal(invoicedata:any){ return this.http.post('http://localhost:5252/api/catagory/decrease-quantity?',invoicedata );
 }
-addOrder(orderdata:any){ return this.http.post('http://localhost:5252/api/Order/Order',orderdata );
+addOrder(order:any){ return this.http.post('http://localhost:5252/api/Order/Order',order );
 }
 Allorders(){ return this.http.get('http://localhost:5252/api/Order/getAllOrder');}
-
+getWithdroalProduct(){ return this.http.get('http://localhost:5252/api/catagory/sellers');}
 }

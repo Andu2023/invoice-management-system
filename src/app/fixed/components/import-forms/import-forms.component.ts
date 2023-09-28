@@ -4,6 +4,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { ImportServiceService } from '../../services/import-service.service';
 import { NgToastService } from 'ng-angular-popup';
+import ValidateForm from 'src/app/helper/validateForms';
 
 
 @Component({
@@ -62,6 +63,10 @@ SaveInvoice() {
     if (result.result == 'pass') {
     
     this.toast.success({detail:"success message", summary:"Stored SuccessFully !",duration:2000})
+    }
+    else{
+      ValidateForm.validateAllFormFields(this.Gebiform);
+      this.toast.error({detail:"Eror message", summary:"invalid form please try agin",duration:3000})
     }
       
     });  

@@ -17,6 +17,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { ForEmployeeComponent } from './components/for-employee/for-employee.component';
 import { ForDepartmntComponent } from './components/for-departmnt/for-departmnt.component';
+import { NgToastModule } from 'ng-angular-popup';
 
 
 
@@ -43,6 +44,7 @@ import { ForDepartmntComponent } from './components/for-departmnt/for-departmnt.
     MatStepperModule,
     MatInputModule ,
     MatButtonModule,
+    NgToastModule
    
   ]
 })

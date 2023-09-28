@@ -10,16 +10,6 @@ import { MatDialog } from '@angular/material/dialog';
 export class ImportpagesComponent implements OnInit{
   ngOnInit(): void {}
 constructor(private dialog:MatDialog){}
-
-  // addproduct(){
-  //   this.dialog.open(AddnewmaterialComponent,{
-  //     height:'90%',
-  //     width:'95%',
-      
-
-  //   });
-    
-  // }
   Transferproduct(){
     this.dialog.open(ImportFormsComponent,{
       height:'95%',

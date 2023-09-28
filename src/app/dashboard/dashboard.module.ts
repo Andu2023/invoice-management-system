@@ -19,6 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { OrderComponent } from './components/order/order.component';
 import { NgToastModule } from 'ng-angular-popup';
+import { ProductInEmployeeComponent } from './components/product-in-employee/product-in-employee.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { NgToastModule } from 'ng-angular-popup';
     ReturnedMaterialComponent,
     AllOrdersComponent,
     ViewAllMaterialComponent,
-    OrderComponent
+    OrderComponent,
+    ProductInEmployeeComponent
   ],
   imports: [
     CommonModule,

@@ -7,6 +7,7 @@ import { DashboardComponentsComponent } from './components/dashboard-components/
 import { AllOrdersComponent } from './components/all-orders/all-orders.component';
 import { ViewAllMaterialComponent } from './components/view-all-material/view-all-material.component';
 import { ViewMaterialByCatagoryComponent } from './components/view-material-by-catagory/view-material-by-catagory.component';
+import { ProductInEmployeeComponent } from './components/product-in-employee/product-in-employee.component';
 
 const routes: Routes = [
   { path: 'dashboard',component: DashboardComponentsComponent,
@@ -16,6 +17,7 @@ children:[
   {path: 'all', component:AllOrdersComponent},
   {path: 'store', component:ViewAllMaterialComponent},
   {path: 'chart', component:MainComponent},
+  {path: 'getwithdroal', component:ProductInEmployeeComponent},
   { path: '**',  redirectTo: 'store', pathMatch: 'full'}
 ]
 }

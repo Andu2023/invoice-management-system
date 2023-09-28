@@ -40,6 +40,9 @@ export class HeaderPageComponent  implements DoCheck{
     else if (this.route.url == '/admin/employeReg') {
       this.displaymenu = false
     } 
+    else if (this.route.url == '/dashboard/getwithdroal') {
+      this.displaymenu = false
+    } 
     else if (this.route.url == '/admin/employelist') {
       this.displaymenu = false
     } 

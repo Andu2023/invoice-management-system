@@ -10,6 +10,7 @@ const routes: Routes = [
   children:[
     {path: 'login', component:LoginPageComponent},
     {path: 'swiper', component:LoginSwiperComponent},
+    
   ]
   }
 ];
