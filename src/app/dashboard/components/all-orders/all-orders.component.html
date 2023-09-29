@@ -1,42 +1,42 @@
 <div class="bg-white w-[800px]  ">
-    <h1 class="pl-72 pt-10">All orders</h1>
-<mat-button-toggle-group #actions="matButtonToggleGroup" class="ml-48 ">
+    <h1 class="pl-72 pt-10">ወጪ ትዕዛዞች</h1>
+<!-- <mat-button-toggle-group #actions="matButtonToggleGroup" class="ml-48 ">
 <mat-button-toggle value="all" checked>All</mat-button-toggle>
 <mat-button-toggle value="pen" checked>pending </mat-button-toggle>
 <mat-button-toggle value="ret" checked>Returned</mat-button-toggle>
 
 
 
-</mat-button-toggle-group>
+</mat-button-toggle-group> -->
 <table mat-table [dataSource]="ordersToDisplay">
 
 
-  <ng-container matColumnDef="employeeName">
-      <th mat-header-cell *matHeaderCellDef>employeeName</th>
+  <ng-container matColumnDef="የአመልካች ስም">
+      <th mat-header-cell *matHeaderCellDef> <b>የአመልካች ስም</b></th>
       <td mat-cell *matCellDef="let element"> {{element.employeeName}} </td>
   </ng-container>
 
   
-  <ng-container matColumnDef="employeeDepartmnt">
-      <th mat-header-cell *matHeaderCellDef>employeeDepartmnt</th>
+  <ng-container matColumnDef="የስራክፍል">
+      <th mat-header-cell *matHeaderCellDef> <b>የስራክፍል</b></th>
       <td mat-cell *matCellDef="let element"> {{element.employeeDepartmnt}} </td>
   </ng-container>
 
   
-  <ng-container matColumnDef="productDescription">
-      <th mat-header-cell *matHeaderCellDef>productDescription</th>
+  <ng-container matColumnDef="ዝርዝር መረጃ">
+      <th mat-header-cell *matHeaderCellDef> <b>ዝርዝር መረጃ</b></th>
       <td mat-cell *matCellDef="let element"> {{element.productDescription}} </td>
   </ng-container>
 
   
-  <ng-container matColumnDef="productName">
-      <th mat-header-cell *matHeaderCellDef>productName</th>
+  <ng-container matColumnDef="የንብረቱ አይነት">
+      <th mat-header-cell *matHeaderCellDef> <b>የንብረቱ አይነት</b></th>
       <td mat-cell *matCellDef="let element"> {{element.productName}} </td>
   </ng-container>
 
   
-  <ng-container matColumnDef="orderDate">
-      <th mat-header-cell *matHeaderCellDef>orderDate</th>
+  <ng-container matColumnDef=" የተላከበትቀን">
+      <th mat-header-cell *matHeaderCellDef> <b>የተላከበትቀን</b></th>
       <td mat-cell *matCellDef="let element"> {{element.orderDate}} </td>
   </ng-container>
 

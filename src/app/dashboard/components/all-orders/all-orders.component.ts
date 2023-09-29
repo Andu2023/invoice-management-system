@@ -10,7 +10,7 @@ import { ImportServiceService } from 'src/app/fixed/services/import-service.serv
 export class AllOrdersComponent  implements OnInit {
   ordersToDisplay:any;
   
-  displayColums:string[]=["employeeName","employeeDepartmnt","productDescription","productName","orderDate"];
+  displayColums:string[]=["የአመልካች ስም","የስራክፍል","የንብረቱ አይነት","ዝርዝር መረጃ"," የተላከበትቀን"];
   constructor(private service:ImportServiceService) { }
   ngOnInit(): void {
     this.getOrder();

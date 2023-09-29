@@ -1,37 +1,37 @@
 <div class="mat-elevation-z8 p-14">
   <table class="mat-elevation-z8" mat-table matSort [dataSource]="UserData" >
       <ng-container matColumnDef="fId">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> fId</th>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> <b>መታወቅያ.ቁ</b></th>
         <td mat-cell *matCellDef="let element">{{element.fId}}</td>
     </ng-container>
         <ng-container matColumnDef="name">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header>name</th>
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> <b>ስም</b></th>
             <td mat-cell *matCellDef="let element">{{element.name}}</td>
         </ng-container>
        
         <ng-container matColumnDef="midleName">
-            <th mat-header-cell *matHeaderCellDef> midleName</th>
+            <th mat-header-cell *matHeaderCellDef> <b>የአባት ስም</b></th>
             <td mat-cell *matCellDef="let element">{{element.midleName}}</td>
         </ng-container>
         <ng-container matColumnDef="lastName">
-          <th mat-header-cell *matHeaderCellDef> lastName</th>
+          <th mat-header-cell *matHeaderCellDef>  <b>የአያት ስም</b></th>
           <td mat-cell *matCellDef="let element">{{element.lastName }}</td>
       </ng-container>
      
         <ng-container matColumnDef="gender">
-            <th mat-header-cell *matHeaderCellDef> gender</th>
+            <th mat-header-cell *matHeaderCellDef> <b>ፆታ</b></th>
             <td mat-cell *matCellDef="let element">{{element.gender}}</td>
         </ng-container>
         <ng-container matColumnDef="departmnt">
-          <th mat-header-cell *matHeaderCellDef> departmnt </th>
+          <th mat-header-cell *matHeaderCellDef> <b>የስራክፍል</b> </th>
           <td mat-cell *matCellDef="let element">{{element.departmnt}}</td>
       </ng-container>
       <ng-container matColumnDef="phoneno">
-        <th mat-header-cell *matHeaderCellDef> phoneno</th>
+        <th mat-header-cell *matHeaderCellDef> <b>ስልክ.ቁ</b></th>
         <td mat-cell *matCellDef="let element">{{element.phoneno}}</td>
     </ng-container>
     <ng-container matColumnDef="level">
-      <th mat-header-cell *matHeaderCellDef> level</th>
+      <th mat-header-cell *matHeaderCellDef> <b>ማዕርግ</b></th>
       <td mat-cell *matCellDef="let element">{{element.level}}</td>
   </ng-container>
      

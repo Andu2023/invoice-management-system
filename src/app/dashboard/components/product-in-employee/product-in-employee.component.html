@@ -1,37 +1,37 @@
 <div class="bg-white w-[800px] pl-10 ">
-  <h1 class=" pt-5 pl-32">All Products In Employee</h1>
+  <h1 class=" pt-5 pl-32 pb-10"><b>በሰራተኛ ይዞታ ስረ ያሉ ንብረቶች</b></h1>
 <table mat-table [dataSource]="ordersToDisplay">
 
 
 <ng-container matColumnDef="employeeName">
-    <th mat-header-cell *matHeaderCellDef>employeeName</th>
+    <th mat-header-cell *matHeaderCellDef> <b>የሰራተኛ ስም</b></th>
     <td mat-cell *matCellDef="let element"> {{element.name}} </td>
 </ng-container>
 
 
 <ng-container matColumnDef="employeeId">
-    <th mat-header-cell *matHeaderCellDef>employeeId</th>
+    <th mat-header-cell *matHeaderCellDef> <b>የሰራተኛ መ.ቁ</b></th>
     <td mat-cell *matCellDef="let element"> {{element.employeeId}} </td>
 </ng-container>
 <ng-container matColumnDef="productName">
-  <th mat-header-cell *matHeaderCellDef>productName</th>
+  <th mat-header-cell *matHeaderCellDef> <b>የተዋሰው ንብረት</b></th>
   <td mat-cell *matCellDef="let element"> {{element.productName}} </td>
 </ng-container>
 
 <ng-container matColumnDef="productCode">
-    <th mat-header-cell *matHeaderCellDef>productCode</th>
+    <th mat-header-cell *matHeaderCellDef> <b>የንብረቱ ሴሪ</b></th>
     <td mat-cell *matCellDef="let element"> {{element.productCode}} </td>
 </ng-container>
 
 
 <ng-container matColumnDef="quantity">
-    <th mat-header-cell *matHeaderCellDef>quantity</th>
+    <th mat-header-cell *matHeaderCellDef> <b>የንብረቱ ብዛት</b></th>
     <td mat-cell *matCellDef="let element"> {{element.quantitySold}} </td>
 </ng-container>
 
 
 <ng-container matColumnDef="withdroalrDate">
-    <th mat-header-cell *matHeaderCellDef>withdroalrDate</th>
+    <th mat-header-cell *matHeaderCellDef> <b>የተዋሰበት ቀን</b></th>
     <td mat-cell *matCellDef="let element"> {{element.withdroalrDate}} </td>
 </ng-container>
 

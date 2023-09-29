@@ -1,15 +1,18 @@
+
+<mat-card>
+    <mat-card-content>
 <div class="pb-28">
   <mat-form-field  >
-    <mat-label>Search Material </mat-label>
-    <input matInput>
+    <mat-label class="tex-blue-950">Search  </mat-label>
+    <input matInput (keyup)="Filterchange($event)" placeholder="Enter the text">
     <button mat-icon-button matSuffix>
-        <mat-icon>search</mat-icon>
+        <mat-icon class="tex-blue-950">search</mat-icon>
     </button>
 </mat-form-field>
   <mat-card>
     <mat-card-content>
         <div>
-            Showing results for 547 books
+        <b>የንብረቶች ብዛት</b>
         </div>
        
     </mat-card-content>
@@ -17,36 +20,36 @@
 <mat-accordion multi="true" >
   <mat-expansion-panel expanded >
       <mat-expansion-panel-header>
-          <mat-panel-title>category </mat-panel-title>
-          <mat-panel-description>subCategory </mat-panel-description>
+          <mat-panel-title><b>ምድብ</b></mat-panel-title>
+          <mat-panel-description><b>መጋዘን.ቁ</b> </mat-panel-description>
       </mat-expansion-panel-header>
 
   <table class="mat-elevation-z8" mat-table matSort [dataSource]="productdata" >
-    <ng-container matColumnDef="productName">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> productName</th>
+    <ng-container matColumnDef="የእቃው ስም">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> <b>የእቃው ስም</b></th>
       <td mat-cell *matCellDef="let element">{{element.productName}}</td>
   </ng-container>
-      <ng-container matColumnDef="productCode">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header> productCode</th>
+      <ng-container matColumnDef="ሴሪያ.ቁ">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> <b>ሴሪያ.ቁ</b></th>
           <td mat-cell *matCellDef="let element">{{element.productCode}}</td>
       </ng-container>
      
-      <ng-container matColumnDef="productModel">
-          <th mat-header-cell *matHeaderCellDef> productModel</th>
+      <ng-container matColumnDef="ሞደል">
+          <th mat-header-cell *matHeaderCellDef> <b>ሞደል</b></th>
           <td mat-cell *matCellDef="let element">{{element.productModel}}</td>
       </ng-container>
 
-      <ng-container matColumnDef="qty">
-          <th mat-header-cell *matHeaderCellDef> qty</th>
+      <ng-container matColumnDef="ብዛት">
+          <th mat-header-cell *matHeaderCellDef> <b>ብዛት</b></th>
           <td mat-cell *matCellDef="let element">{{element.qty}}</td>
       </ng-container>
-      <ng-container matColumnDef="salesPrice">
-        <th mat-header-cell *matHeaderCellDef> salesPrice</th>
-        <td mat-cell *matCellDef="let element">{{element.salesPrice | currency }}</td>
+      <ng-container matColumnDef="የአንዱ ዋጋ">
+        <th mat-header-cell *matHeaderCellDef> <b>የአንዱ ዋጋ</b></th>
+        <td mat-cell *matCellDef="let element">{{element.salesPrice}} ETB</td>
     </ng-container>
-    <ng-container matColumnDef="total">
-      <th mat-header-cell *matHeaderCellDef> total</th>
-      <td mat-cell *matCellDef="let element">{{element.total}}</td>
+    <ng-container matColumnDef="አጠቃላይ ዋጋ">
+      <th mat-header-cell *matHeaderCellDef> <b>አጠቃላይ ዋጋ</b></th>
+      <td mat-cell *matCellDef="let element">{{element.total}} ETB</td>
   </ng-container>
 <ng-container matColumnDef="action">
           <th mat-header-cell *matHeaderCellDef style="width:15%"> Action</th>
@@ -57,10 +60,17 @@
       </ng-container>
       <tr mat-header-row *matHeaderRowDef="displayColums"></tr>
       <tr mat-row *matRowDef="let row; columns: displayColums;"></tr>
-      <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of periodic elements">
-      </mat-paginator>
+      
   </table>
 </mat-expansion-panel>
 </mat-accordion>
 
 </div>
+<br>
+<mat-card-footer>
+
+    <mat-paginator [pageSizeOptions]="[5,10,20]" showFirstLastButtons></mat-paginator>
+
+</mat-card-footer>
+</mat-card-content>
+</mat-card>
