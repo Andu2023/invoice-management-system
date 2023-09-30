@@ -40,6 +40,7 @@ import { NgToastModule } from 'ng-angular-popup';
   
   DashboardModule,
   MatStepperModule,
+  AuthModule
 
   
 

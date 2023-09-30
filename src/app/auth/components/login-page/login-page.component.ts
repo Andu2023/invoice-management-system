@@ -42,6 +42,7 @@ this.isText?this.type="text":this.type="password";
           //alert(res.message);
           this.toast.success({detail:" Message", summary:res.message,duration:2000})
           this.loginForm.reset();
+          this.service.storeToken(res.accessToken);
           this.router.navigate(['home'])
         },
         error:(err)=>{

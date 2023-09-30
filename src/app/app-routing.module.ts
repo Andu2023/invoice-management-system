@@ -4,9 +4,10 @@ import { HomePageComponent } from './common/home-page/home-page.component';
 import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
+  { path: '',  redirectTo: '/auth/login', pathMatch: 'full'},
   {
     path:'home',
-    component:HomePageComponent,
+    component:HomePageComponent,canActivate:[AuthGuard]
   },
   // { path: '**',  redirectTo: '/auth/login', pathMatch: 'full'}
 ];

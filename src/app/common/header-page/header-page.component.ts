@@ -1,5 +1,6 @@
 import { Component, DoCheck, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthServiceService } from 'src/app/auth/Services/auth-service.service';
 
 @Component({
   selector: 'app-header-page',
@@ -9,8 +10,11 @@ import { Router } from '@angular/router';
 export class HeaderPageComponent  implements DoCheck{
   @Output() menuClicked=new EventEmitter<boolean>();
   displaymenu=false;
-  constructor(private route:Router){
+  constructor(private route:Router,private auth:AuthServiceService){
 
+  }
+  logout(){
+    this.auth.signOut();
   }
   ngDoCheck(): void {
     if (this.route.url == '/auth/login') {

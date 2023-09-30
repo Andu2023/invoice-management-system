@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { OrderComponent } from './components/order/order.component';
 import { NgToastModule } from 'ng-angular-popup';
 import { ProductInEmployeeComponent } from './components/product-in-employee/product-in-employee.component';
+import { AuthModule } from '../auth/auth.module';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { ProductInEmployeeComponent } from './components/product-in-employee/pro
     MaterialModule,
    ReactiveFormsModule,
    NgToastModule,
-    HttpClientModule
+    HttpClientModule,
+    AuthModule
   ]
 })
 export class DashboardModule { }

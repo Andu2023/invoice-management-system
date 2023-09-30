@@ -8,14 +8,15 @@ import { AllOrdersComponent } from './components/all-orders/all-orders.component
 import { ViewAllMaterialComponent } from './components/view-all-material/view-all-material.component';
 import { ViewMaterialByCatagoryComponent } from './components/view-material-by-catagory/view-material-by-catagory.component';
 import { ProductInEmployeeComponent } from './components/product-in-employee/product-in-employee.component';
+import { AuthGuard } from '../guards/auth.guard';
 
 const routes: Routes = [
   { path: 'dashboard',component: DashboardComponentsComponent,
 children:[
   // {path: 'dashboardcomponts', component:DashboardComponentsComponent},
   {path: 'sideNav', component:SideNaveComponent},
-  {path: 'all', component:AllOrdersComponent},
-  {path: 'store', component:ViewAllMaterialComponent},
+  {path: 'all', component:AllOrdersComponent,canActivate:[AuthGuard]},
+  {path: 'store', component:ViewAllMaterialComponent,canActivate:[AuthGuard]},
   {path: 'chart', component:MainComponent},
   {path: 'getwithdroal', component:ProductInEmployeeComponent},
   { path: '**',  redirectTo: 'store', pathMatch: 'full'}
