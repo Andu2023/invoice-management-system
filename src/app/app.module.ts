@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { SwiperComponent } from './swiper/swiper.component';
 import { NgToastModule } from 'ng-angular-popup';
+import { ContactFormComponent } from './common/contact-form/contact-form.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { NgToastModule } from 'ng-angular-popup';
     FooterPageComponent,
     HomePageComponent,
     SwiperComponent,
+    ContactFormComponent,
    
   ],
   imports: [
