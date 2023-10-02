@@ -17,8 +17,8 @@ children:[
   {path: 'sideNav', component:SideNaveComponent},
   {path: 'all', component:AllOrdersComponent,canActivate:[AuthGuard]},
   {path: 'store', component:ViewAllMaterialComponent,canActivate:[AuthGuard]},
-  {path: 'chart', component:MainComponent},
-  {path: 'getwithdroal', component:ProductInEmployeeComponent},
+  {path: 'chart', component:MainComponent,canActivate:[AuthGuard]},
+  {path: 'getwithdroal', component:ProductInEmployeeComponent,canActivate:[AuthGuard]},
   { path: '**',  redirectTo: 'store', pathMatch: 'full'}
 ]
 }

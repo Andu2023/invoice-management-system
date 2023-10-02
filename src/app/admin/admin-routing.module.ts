@@ -10,7 +10,7 @@ import { EmployeListPageComponent } from './employe-list-page/employe-list-page.
 import { AuthGuard } from '../guards/auth.guard';
 
 const routes: Routes = [
-  { path: 'admin', component:AdminCompontesComponent,
+  { path: 'admin', component:AdminCompontesComponent,canActivate:[AuthGuard],
 children:[
   {path: 'userReg', component:UserRegFormComponent},
   {path: 'userlist', component:UserListPageComponent},
