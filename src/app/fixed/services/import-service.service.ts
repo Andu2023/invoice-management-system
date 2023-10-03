@@ -21,4 +21,7 @@ addOrder(order:any){ return this.http.post('http://localhost:5252/api/Order/Orde
 }
 Allorders(){ return this.http.get('http://localhost:5252/api/Order/getAllOrder');}
 getWithdroalProduct(){ return this.http.get('http://localhost:5252/api/catagory/sellers');}
+GetEmployeebyId(fId:any) {
+  return this.http.get('http://localhost:5252/api/Employee/GetAllEmploteeByCode=?'+fId);
+}
 }

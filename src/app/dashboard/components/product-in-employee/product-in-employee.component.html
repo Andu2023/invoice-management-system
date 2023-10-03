@@ -1,3 +1,5 @@
+<mat-card class="mb-3">
+    <mat-card-content>
 <div class="bg-white w-[800px] pl-10 ">
   <h1 class=" pt-5 pl-32 pb-10"><b>በሰራተኛ ይዞታ ስረ ያሉ ንብረቶች</b></h1>
 <table mat-table [dataSource]="ordersToDisplay">
@@ -42,3 +44,11 @@
 </table>
 
 </div>
+<mat-card-footer>
+
+    <mat-paginator [pageSizeOptions]="[5,10,20]" showFirstLastButtons></mat-paginator>
+
+</mat-card-footer>
+</mat-card-content>
+</mat-card>
+  

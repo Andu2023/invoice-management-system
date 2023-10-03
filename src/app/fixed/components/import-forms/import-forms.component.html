@@ -103,11 +103,12 @@
                   </tr>
                   <tr class="flex grid-cols-2">
                       <td class="w-6/12"> <label >ንብረት ተቀባይ.መ.ቁ </label></td>
-                      <td class="w-6/12"><input formControlName="customerId" placeholder="" class=" mb-2 form-control outline-none border px-3 py-1 bg-gray-200">                        </td>
+                      <td class="w-6/12"><input formControlName="customerId" placeholder=""  (change)="customerchange()" class=" mb-2 form-control outline-none border px-3 py-1 bg-gray-200">                        </td>
                   </tr>
                   <tr class="flex grid-cols-2">
                       <td class="w-6/12">   <label >ንብረት ተቀባይ ስም</label></td>
-                      <td class="w-6/12">  <input formControlName="customerName"  placeholder="" class="mb-2 form-control outline-none border px-3 py-1 bg-gray-200">                        </td>
+                      <td class="w-6/12">  <input formControlName="customerName"  placeholder="" class="mb-2 form-control outline-none border px-3 py-1 bg-gray-200">    </td>
+                      <!-- <textarea formControlName="customerName" class="form-control mb-2 form-control outline-none border px-3 py-1 bg-gray-200"></textarea> -->
                   </tr>
                  
               </table>

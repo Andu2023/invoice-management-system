@@ -18,7 +18,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { ForEmployeeComponent } from './components/for-employee/for-employee.component';
 import { ForDepartmntComponent } from './components/for-departmnt/for-departmnt.component';
 import { NgToastModule } from 'ng-angular-popup';
-import { AuthModule } from '../auth/auth.module';
+
 import { DashboardModule } from '../dashboard/dashboard.module';
 import { AppModule } from '../app.module';
 import { AuthRoutingModule } from '../auth/auth-routing.module';
@@ -50,7 +50,7 @@ import { AuthRoutingModule } from '../auth/auth-routing.module';
     MatInputModule ,
     MatButtonModule,
     NgToastModule,
-    AuthModule,
+  
     DashboardModule,
     AuthRoutingModule
   

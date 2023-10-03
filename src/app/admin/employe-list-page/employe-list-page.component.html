@@ -1,4 +1,7 @@
-<div class="mat-elevation-z8 p-14">
+
+<mat-card class="mat-elevation-z8 p-14" >
+<mat-card-content>
+<div class="">
   <table class="mat-elevation-z8" mat-table matSort [dataSource]="UserData" >
       <ng-container matColumnDef="fId">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> <b>መታወቅያ.ቁ</b></th>
@@ -48,3 +51,10 @@
         </mat-paginator>
     </table>
   </div>
+  <mat-card-footer>
+
+    <mat-paginator [pageSizeOptions]="[5,10,20]" showFirstLastButtons></mat-paginator>
+
+</mat-card-footer>
+</mat-card-content>
+</mat-card>

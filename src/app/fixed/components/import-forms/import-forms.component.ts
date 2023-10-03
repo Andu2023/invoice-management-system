@@ -147,4 +147,15 @@ Removeproduct(index: any){
 
   }
 }
+customerchange() {
+  let fId= this.Gebiform.get("customerId")?.value;
+  this.service.GetEmployeebyId(fId).subscribe(res => {
+    let custdata: any;
+    custdata = res;
+    if (custdata != null) {
+     
+      this.Gebiform.get("customerName")?.setValue(custdata.name);
+    }
+  });
+}
 }
