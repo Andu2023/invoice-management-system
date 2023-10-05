@@ -9,10 +9,11 @@
         <div class="navbar">
         <div class="nav-links ">
             <ul class="links flex pl-28">
-               <li> <a routerLink="/dashboard">ዳሽቦርድ </a></li>
-                <li>
+               <li> <a routerLink="/admin"  *ngIf="role === 'admin'">ዳሽቦርድ </a></li>
+               <li> <a routerLink="/dashboard"  *ngIf="role === 'mangment'">ዳሽቦርድ </a></li>
+                <li *ngIf="role === 'mangment'">
             <a href="#">ንብረት</a>
-            <i class='bx bx-chevron-down arrow html-arrow'></i>
+            <i class='bx bx-chevron-down arrow html-arrow'  *ngIf="role === 'mangment'"></i>
             <ul class="html-sub-menu html-sub">
                 <li class="fixed">
                   <a href="#">ቋሚ ንብረት</a>
@@ -29,9 +30,9 @@
     
         </li>
         
-               <li>
-                <a href="#">የጦር መሣሪያ</a>
-                <i class='bx bx-chevron-down arrow ja-arrow'></i>
+               <li *ngIf="role === 'mangment'">
+                <a href="#" >የጦር መሣሪያ</a>
+                <i class='bx bx-chevron-down arrow ja-arrow' ></i>
                 <ul class="html-sub-menu java-sub">
                     <li><a routerLink="/admin/userReg">መመዝገብ</a></li>
                     <li><a href="#">ማስተላለፍ</a></li>
@@ -43,18 +44,19 @@
             
             </li>
               <li>  
-                <a routerLink="/home">
+                <a routerLink="/home"  *ngIf="role === 'mangment'" >
                   ሪፖርት</a>
             </li>
     
               <li > 
                  <!-- <a href="#">ተጨማሪ መረጃ</a> ግንኙነት -->
-                 <a routerLink="contact"> ግንኙነት</a>
+                 <a routerLink="contact" *ngIf="role === 'user'"> ግንኙነት</a>
                 </li>
                 <li > 
-                  <a routerLink="fixed/order">ትዕዛዝ</a>
+                  <a routerLink="fixed/order" *ngIf="role === 'user'">ትዕዛዝ</a>
                  </li>
                 <div class="logout">
+                  <a href=""><h1>{{fullName}}</h1></a>
                   <a  style="float: right;" class="menulink" (click)="logout()">ይዝጉ</a>
                 </div>
             </ul>

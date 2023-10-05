@@ -14,7 +14,7 @@ export class AuthServiceService {
   private baseUrl:string = "http://localhost:5252/api/User/";
   private userPayload:any;
   constructor(private http:HttpClient,private router:Router) {
-    // this.userPayload = this.decodedToken();
+    this.userPayload = this.decodedToken();
    }
  signUp(userObj: any) {
     return this.http.post<any>(`${this.baseUrl}register`,userObj);

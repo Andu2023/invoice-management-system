@@ -13,11 +13,12 @@ import { AdminModule } from './admin/admin.module';
 import { MaterialModule } from './Material/MaterialModule';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { MatStepperModule } from '@angular/material/stepper';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
 import { SwiperComponent } from './swiper/swiper.component';
 import { NgToastModule } from 'ng-angular-popup';
 import { ContactFormComponent } from './common/contact-form/contact-form.component';
+import { TokenInterceptor } from './interceptor/token.interceptor';
 
 
 @NgModule({
@@ -47,7 +48,11 @@ import { ContactFormComponent } from './common/contact-form/contact-form.compone
   
 
   ],
-  providers: [],
+  providers: [{
+    provide:HTTP_INTERCEPTORS,
+    useClass:TokenInterceptor,
+    multi:true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
