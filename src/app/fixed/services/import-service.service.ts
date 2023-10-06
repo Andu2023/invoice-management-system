@@ -20,7 +20,9 @@ withdroal(invoicedata:any){ return this.http.post('http://localhost:5252/api/cat
 addOrder(order:any){ return this.http.post('http://localhost:5252/api/Order/Order',order );
 }
 Allorders(){ return this.http.get('http://localhost:5252/api/Order/getAllOrder');}
-getWithdroalProduct(){ return this.http.get('http://localhost:5252/api/catagory/sellers');}
+
+getWithdroalProduct(){ return this.http.get('http://localhost:5252/api/catagory/userAndProduct');}
+
 GetEmployeebyId(fId:any) {
   return this.http.get('http://localhost:5252/api/Employee/GetAllEmploteeByCode=?'+fId);
 }

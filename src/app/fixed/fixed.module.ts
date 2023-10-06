@@ -20,7 +20,7 @@ import { ForDepartmntComponent } from './components/for-departmnt/for-departmnt.
 import { NgToastModule } from 'ng-angular-popup';
 
 import { DashboardModule } from '../dashboard/dashboard.module';
-import { AppModule } from '../app.module';
+
 import { AuthRoutingModule } from '../auth/auth-routing.module';
 
 

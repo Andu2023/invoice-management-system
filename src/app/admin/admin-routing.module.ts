@@ -12,10 +12,10 @@ import { AuthGuard } from '../guards/auth.guard';
 const routes: Routes = [
   { path: 'admin', component:AdminCompontesComponent,canActivate:[AuthGuard],
 children:[
-  {path: 'userReg', component:UserRegFormComponent},
-  {path: 'userlist', component:UserListPageComponent},
-  {path: 'employeReg', component:EmployeRegFormComponent},
-  {path: 'employelist', component:EmployeListPageComponent}
+  {path: 'userReg', component:UserRegFormComponent,canActivate:[AuthGuard]},
+  {path: 'userlist', component:UserListPageComponent,canActivate:[AuthGuard]},
+  {path: 'employeReg', component:EmployeRegFormComponent,canActivate:[AuthGuard]},
+  {path: 'employelist', component:EmployeListPageComponent,canActivate:[AuthGuard]}
 ]
 }
 ];

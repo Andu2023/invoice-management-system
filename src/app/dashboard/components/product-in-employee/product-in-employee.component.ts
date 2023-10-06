@@ -12,7 +12,8 @@ import { ImportServiceService } from 'src/app/fixed/services/import-service.serv
 export class ProductInEmployeeComponent implements OnInit {
   ordersToDisplay:any;
   
-  displayColums:string[]=["employeeName","employeeId","productName","productCode","quantity","withdroalrDate"];
+  displayColums:string[]=["employeeName","employeeId","productName","quantity","withdroalrDate"];
+
   @ViewChild(MatPaginator) paginatior !: MatPaginator;
   @ViewChild(MatSort) sort !: MatSort;
   constructor(private service:ImportServiceService) { }
@@ -20,12 +21,18 @@ export class ProductInEmployeeComponent implements OnInit {
     this.getOrder();
   }
   getOrder() {
-    this.service.getWithdroalProduct().subscribe(res => {
-      this.ordersToDisplay = res;
+    // this.service.getWithdroalProduct().subscribe(res => {
+    //   this.ordersToDisplay = res;
+    //   this.ordersToDisplay = new MatTableDataSource(this.ordersToDisplay);
+    //   this.ordersToDisplay.paginator = this.paginatior;
+    //   this.ordersToDisplay.sort = this.sort;
+    // });
+    this.service.getWithdroalProduct().subscribe(resp=>{
+      this.ordersToDisplay=resp;
       this.ordersToDisplay = new MatTableDataSource(this.ordersToDisplay);
       this.ordersToDisplay.paginator = this.paginatior;
-      this.ordersToDisplay.sort = this.sort;
-    });
+      this.sort = this.sort;
+    })
   }
   EditProduct(code:any){
     // this.router.navigate(['product/edit/'+code])
