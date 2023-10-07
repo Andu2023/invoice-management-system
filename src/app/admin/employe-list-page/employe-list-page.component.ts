@@ -10,9 +10,10 @@ import { ImportServiceService } from 'src/app/fixed/services/import-service.serv
   styleUrls: ['./employe-list-page.component.css']
 })
 export class EmployeListPageComponent implements OnInit {
-  UserData:any;
+ // UserData:any;
+ ordersToDisplay:any;
   
-  displayColums:string[]=["fId","name","midleName","lastName","gender","departmnt","phoneno","level"];
+  displayColums:string[]=["መታወቅያ.ቁ","ስም","የአባትስም","የአያትስም","ፆታ","የስራክፍል","ስልክ.ቁ","ማዕርግ"];
   @ViewChild(MatPaginator) paginatior !: MatPaginator;
   @ViewChild(MatSort) sort !: MatSort;
  
@@ -23,11 +24,16 @@ export class EmployeListPageComponent implements OnInit {
     this.emp();
   }
   emp(){
-    this.service.employee().subscribe(resp=>{
-      this.UserData=resp;
-      this.UserData = new MatTableDataSource(this.UserData);
-      this.UserData.paginator = this.paginatior;
-      this.UserData.sort = this.sort;
+    // this.service.employee().subscribe(resp=>{
+      this.service.employee().subscribe(resp=>{
+        this.ordersToDisplay=resp;
+        this.ordersToDisplay = new MatTableDataSource(this.ordersToDisplay);
+        this.ordersToDisplay.paginator = this.paginatior;
+        this.sort = this.sort;
+      // this.UserData=resp;
+      // this.UserData = new MatTableDataSource(this.UserData);
+      // this.UserData.paginator = this.paginatior;
+      // this.UserData.sort = this.sort;
     })
   }
 

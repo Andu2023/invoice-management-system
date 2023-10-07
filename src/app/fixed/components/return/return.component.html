@@ -1,13 +1,13 @@
-<div class="all ">
+<div class="all h-72">
     <mat-toolbar class="flex justify-end bg-white w-full">
-        <button class="btn-dialog-close flex justify-center items-center" mat-stroked-button (click)="onclose()" tabindex="-1">
+        <button class="btn-dialog-close flex justify-center items-center pt-0 " mat-stroked-button (click)="onclose()" tabindex="-1">
             <mat-icon >close</mat-icon>
         </button>
       </mat-toolbar>
-  <form class="container  bg-white w-full " [formGroup]="withdroalform" (ngSubmit)="SaveInvoice()" >
+  <form class="container  bg-white w-full h-72" [formGroup]="returnform" (ngSubmit)="SaveInvoice()" >
  
-    <div class="card items-center justify-center  ">
-        <div class="justify-center .m-24 items-center ml-20 mb-3"><h3 >ለሰራተኛ  ወጭ ያድርጉ</h3></div>
+    <div class="card items-center justify-center ml-40 pt-5 ">
+        <div class="justify-center .m-24 items-center"><h3 ><u>ንብረቱን ወደ መጋዘን  ይመልሱ</u></h3></div>
   
         <div class="card-body items-center justify-center">
           
@@ -30,7 +30,7 @@
             <br>
            
         </div> 
-        <div class="save pl-10 " >
+        <div class="save pl-20 mt-5 " >
                     <button type="submit" class=" bg-gray-300" >አጠናቅ</button>
                 </div>
     </div>

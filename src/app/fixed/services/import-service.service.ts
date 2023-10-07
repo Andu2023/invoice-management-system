@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ImportServiceService {
+  // private baseUrl:string = "http://localhost:5252/api/Product/";
 
   constructor(private http:HttpClient) { }
 
@@ -15,7 +16,7 @@ GetAllImportHeaders(){ return this.http.get('http://localhost:5252/api/Import/Ge
 addEmployee(invoicedata:any){ return this.http.post('http://localhost:5252/api/Employee/AddEmployee',invoicedata );
 }
 employee(){ return this.http.get('http://localhost:5252/api/Employee/GetAll');}
-withdroal(invoicedata:any){ return this.http.post('http://localhost:5252/api/catagory/decrease-quantity?',invoicedata );
+return(invoicedata:any){ return this.http.post('http://localhost:5252/api/Product/return',invoicedata );
 }
 addOrder(order:any){ return this.http.post('http://localhost:5252/api/Order/Order',order );
 }
@@ -26,4 +27,6 @@ getWithdroalProduct(){ return this.http.get('http://localhost:5252/api/catagory/
 GetEmployeebyId(fId:any) {
   return this.http.get('http://localhost:5252/api/Employee/GetAllEmploteeByCode=?'+fId);
 }
+Return(invoicedata:any){ return this.http.post('http://localhost:5252/api/Product/return',invoicedata );}
+withdroalProduct(invoicedata:any){ return this.http.post('http://localhost:5252/api/catagory/decrease-quantity',invoicedata );}
 }

@@ -1,120 +1,124 @@
-<form class="container  bg-white w-full" [formGroup]="Gebiform" (ngSubmit)="SaveInvoice()">
-  <mat-toolbar class="flex justify-end bg-white w-full">
-      <button class="btn-dialog-close flex justify-center items-center" mat-stroked-button (click)="onclose()" tabindex="-1">
-          <mat-icon class="bg-white">close</mat-icon>
-      </button>
-    </mat-toolbar>
+<div class="all">
+    <mat-toolbar class="flex justify-end bg-white w-full">
+        <button class="btn-dialog-close flex justify-center items-center" mat-stroked-button (click)="onclose()" tabindex="-1">
+            <mat-icon class="bg-white">close</mat-icon>
+        </button>
+      </mat-toolbar>
+    <form class="container  bg-white w-full" [formGroup]="Gebiform" (ngSubmit)="SaveInvoice()">
     
-  <div class="card items-center justify-center h-72">
-      <div class="justify-center .m-24 items-center"><h3 >{{pagetitle}}</h3></div>
-
-      <div class="card-body items-center justify-center">
-        
-          <table>
-                  <tr class="flex grid-cols-2 mb-2">
-                      <td class="w-6/12"><label >ንብረቱን የአቀረበው ድርጅትስም</label></td>
-                      <td class="w-6/12"> <input placeholder=" " formControlName="deliveryCampanyName" class="form-control outline-none border px-3 py-1 bg-gray-200">
-                      </td>
-                  </tr>
-                  <tr class="flex grid-cols-2 mb-2">
-                      <td class="w-6/12">   <label >  የደረሰኝ .ቁ</label></td>
-                      <td class="w-6/12">  <input formControlName="invoiceNo" placeholder="" class="form-control outline-none border px-3 py-1 bg-gray-200">                        </td>
-                  </tr>
-                  <tr class="flex grid-cols-2 mb-2">
-                      <td class="w-6/12"> <label >ገቢ የተደረገበት ቀን</label></td>
-                      <td class="w-6/12"><input type="date" formControlName="invoiceDate"class=" form-control outline-none border px-3 py-1 bg-gray-200 w-48 ">                        </td>
-                  </tr>
-              </table>
-          <br>
-          <div class="row">
-              <div class="relative overflow-x-auto">
-               <table class="table-fixed  text-sm text-left text-gray-500 dark:text-gray-400" formArrayName="detials">
-                       <thead  class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400 ">
-                          <tr class="ml-4">
-                              <td class="px-6 py-3">ቁ</td>
-                              <td>invoiceNo</td>
-                              <td class="px-6 py-3" >የእቃው ስም</td>
-                              <td class="px-6 py-3" >ሴሪያ.ቁ</td>
-                              <td class="px-6 py-3">ሞደል</td>
-                              <td class="px-6 py-3">ብዛት</td>
-                              <td class="px-6 py-3">የአንዱ ዋጋ</td>
-                              <td class="px-6 py-3">ድምር</td>  
-                              <td class="px-6 py-3"></td>
+          
+        <div class="card items-center justify-center h-72">
+            <div class="justify-center .m-24 items-center"><h3 >{{pagetitle}}</h3></div>
+      
+            <div class="card-body items-center justify-center">
+              
+                <table>
+                        <tr class="flex grid-cols-2 mb-2">
+                            <td class="w-6/12"><label >ንብረቱን የአቀረበው ድርጅትስም</label></td>
+                            <td class="w-6/12"> <input placeholder=" " formControlName="deliveryCampanyName" class="form-control outline-none border px-3 py-1 bg-gray-200">
+                            </td>
+                        </tr>
+                        <tr class="flex grid-cols-2 mb-2">
+                            <td class="w-6/12">   <label >  የደረሰኝ .ቁ</label></td>
+                            <td class="w-6/12">  <input formControlName="invoiceNo" placeholder="" class="form-control outline-none border px-3 py-1 bg-gray-200">                        </td>
+                        </tr>
+                        <tr class="flex grid-cols-2 mb-2">
+                            <td class="w-6/12"> <label >ገቢ የተደረገበት ቀን</label></td>
+                            <td class="w-6/12"><input type="date" formControlName="invoiceDate"class=" form-control outline-none border px-3 py-1 bg-gray-200 w-48 ">                        </td>
+                        </tr>
+                    </table>
+                <br>
+                <div class="row">
+                    <div class="relative overflow-x-auto">
+                     <table class="table-fixed  text-sm text-left text-gray-500 dark:text-gray-400" formArrayName="detials">
+                             <thead  class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400 ">
+                                <tr class="ml-4">
+                                    <td class="px-6 py-3">ቁ</td>
+                                    <td>invoiceNo</td>
+                                    <td class="px-6 py-3" >የእቃው ስም</td>
+                                    <td class="px-6 py-3" >ሴሪያ.ቁ</td>
+                                    <td class="px-6 py-3">ሞደል</td>
+                                    <td class="px-6 py-3">ብዛት</td>
+                                    <td class="px-6 py-3">የአንዱ ዋጋ</td>
+                                    <td class="px-6 py-3">ድምር</td>  
+                                    <td class="px-6 py-3"></td>
+                                </tr>
+                             </thead>
+                             <tbody>
+                          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"  *ngFor="let item of Gebeproduct.controls;let i=index" [formGroupName]="i">
+                            <td class="px-6 py-4">{{i+1}}</td>
+                            <td class="px-6 py-4">
+                                <input class="form-control" formControlName="invoiceNo"/>
+                             </td>
+                             <td class="px-6 py-4">
+                                <input class="form-control border-solid border-2 border-gray-600" formControlName="productName">
+                             </td>
+                         <td class="px-6 py-4">
+                            <input class="form-control border-solid border-2 border-gray-600" formControlName="productCode">
+                         </td>
+                         <td class="px-6 py-4">
+                            <input class="form-control border-solid border-2 border-gray-600" formControlName="productModel">
+                         </td>
+                         <td class="px-6 py-4">
+                            <input class="form-control border-solid border-2 border-gray-600"  (change)="Itemcalculation(i)"  formControlName="qty">
+                         </td>
+                         <td class="px-6 py-4">
+                            <input class="form-control border-solid border-2 border-gray-600"  (change)="Itemcalculation(i)" formControlName="salesPrice">
+                         </td >
+                         <td class="px-6 py-4">
+                            <input class="form-control border-solid border-2 border-gray-600" formControlName="total">
+                         </td>
+                         <td class="px-6 py-4">
+                            <a (click)="Removeproduct(i)" class="btn btn-danger"> <mat-icon>delete</mat-icon></a>
+                         </td>
                           </tr>
-                       </thead>
-                       <tbody>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"  *ngFor="let item of Gebeproduct.controls;let i=index" [formGroupName]="i">
-                      <td class="px-6 py-4">{{i+1}}</td>
-                      <td class="px-6 py-4">
-                          <input class="form-control" formControlName="invoiceNo"/>
-                       </td>
-                       <td class="px-6 py-4">
-                          <input class="form-control border-solid border-2 border-gray-600" formControlName="productName">
-                       </td>
-                   <td class="px-6 py-4">
-                      <input class="form-control border-solid border-2 border-gray-600" formControlName="productCode">
-                   </td>
-                   <td class="px-6 py-4">
-                      <input class="form-control border-solid border-2 border-gray-600" formControlName="productModel">
-                   </td>
-                   <td class="px-6 py-4">
-                      <input class="form-control border-solid border-2 border-gray-600"  (change)="Itemcalculation(i)"  formControlName="qty">
-                   </td>
-                   <td class="px-6 py-4">
-                      <input class="form-control border-solid border-2 border-gray-600"  (change)="Itemcalculation(i)" formControlName="salesPrice">
-                   </td >
-                   <td class="px-6 py-4">
-                      <input class="form-control border-solid border-2 border-gray-600" formControlName="total">
-                   </td>
-                   <td class="px-6 py-4">
-                      <a (click)="Removeproduct(i)" class="btn btn-danger"> <mat-icon>delete</mat-icon></a>
-                   </td>
-                    </tr>
-                       </tbody> 
-                       <tfoot>
-                          <tr>
-                              <td class="colspan=6 mt-6">
-                           <a (click)="addnewproduct()" class=" mt-3 btn btn-primary"><button class="w-32 bg-blue-100 tex .rounded-sm">ንብረቱን ያስገቡ </button></a>
-                              </td>
-                          </tr>
-                       </tfoot>
-               </table>      
-              </div>
-          </div>
-      <br>
-      <div class="row">
-          <div class="col-lg-5">
-              <div class=" grid-cols-2 p-10 flex space-x-4">
-                  <label class="">አጠቃላይ ድምር</label> 
-                  <input formControlName="total" placeholder="" class="form-control  outline-none border px-3 py-1 bg-gray-200"/>
-              </div>
-          </div> 
-      </div>
-        
-          <table>
-                  <tr class="flex grid-cols-2">
-                      <td class="w-6/12"><label >ንብረት የአቀረበው .መ.ቁ</label></td>
-                      <td class="w-6/12"> <input formControlName="deliveryId" placeholder=""  class=" mb-2 form-control outline-none border px-3 py-1 bg-gray-200">
-                      </td>
-                  </tr>
-                  <tr class="flex grid-cols-2">
-                      <td class="w-6/12">   <label > ንብረት የአቀረበው ስም</label></td>
-                      <td class="w-6/12">  <input formControlName="deliverysName"  placeholder="" class=" mb-2 form-control outline-none border px-3 py-1 bg-gray-200">                        </td>
-                  </tr>
-                  <tr class="flex grid-cols-2">
-                      <td class="w-6/12"> <label >ንብረት ተቀባይ.መ.ቁ </label></td>
-                      <td class="w-6/12"><input formControlName="customerId" placeholder=""  (change)="customerchange()" class=" mb-2 form-control outline-none border px-3 py-1 bg-gray-200">                        </td>
-                  </tr>
-                  <tr class="flex grid-cols-2">
-                      <td class="w-6/12">   <label >ንብረት ተቀባይ ስም</label></td>
-                      <td class="w-6/12">  <input formControlName="customerName"  placeholder="" class="mb-2 form-control outline-none border px-3 py-1 bg-gray-200">    </td>
-                      <!-- <textarea formControlName="customerName" class="form-control mb-2 form-control outline-none border px-3 py-1 bg-gray-200"></textarea> -->
-                  </tr>
-                 
-              </table>
-      </div> 
-      <div class="save pt-10  justify-center items-center" >
-                  <button type="submit" class="  w-20 m-10 bg-blue-200 tex .rounded-sm" >አጠናቅ</button>
-              </div>
-  </div>
-  </form>
+                             </tbody> 
+                             <tfoot>
+                                <tr>
+                                    <td class="colspan=6 mt-6">
+                                 <a (click)="addnewproduct()" class=" mt-3 btn btn-primary"><button class="w-32 bg-blue-100 tex .rounded-sm">ንብረቱን ያስገቡ </button></a>
+                                    </td>
+                                </tr>
+                             </tfoot>
+                     </table>      
+                    </div>
+                </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class=" grid-cols-2 p-10 flex space-x-4">
+                        <label class="">አጠቃላይ ድምር</label> 
+                        <input formControlName="total" placeholder="" class="form-control  outline-none border px-3 py-1 bg-gray-200"/>
+                    </div>
+                </div> 
+            </div>
+              
+                <table>
+                        <tr class="flex grid-cols-2">
+                            <td class="w-6/12"><label >ንብረት የአቀረበው .መ.ቁ</label></td>
+                            <td class="w-6/12"> <input formControlName="deliveryId" placeholder=""  class=" mb-2 form-control outline-none border px-3 py-1 bg-gray-200">
+                            </td>
+                        </tr>
+                        <tr class="flex grid-cols-2">
+                            <td class="w-6/12">   <label > ንብረት የአቀረበው ስም</label></td>
+                            <td class="w-6/12">  <input formControlName="deliverysName"  placeholder="" class=" mb-2 form-control outline-none border px-3 py-1 bg-gray-200">                        </td>
+                        </tr>
+                        <tr class="flex grid-cols-2">
+                            <td class="w-6/12"> <label >ንብረት ተቀባይ.መ.ቁ </label></td>
+                            <td class="w-6/12"><input formControlName="customerId" placeholder=""  (change)="customerchange()" class=" mb-2 form-control outline-none border px-3 py-1 bg-gray-200">                        </td>
+                        </tr>
+                        <tr class="flex grid-cols-2">
+                            <td class="w-6/12">   <label >ንብረት ተቀባይ ስም</label></td>
+                            <td class="w-6/12">  <input formControlName="customerName"  placeholder="" class="mb-2 form-control outline-none border px-3 py-1 bg-gray-200">    </td>
+                            <!-- <textarea formControlName="customerName" class="form-control mb-2 form-control outline-none border px-3 py-1 bg-gray-200"></textarea> -->
+                        </tr>
+                       
+                    </table>
+            </div> 
+            <div class="save pt-10  justify-center items-center" >
+                        <button type="submit" class="  w-20 m-10 bg-blue-200 tex .rounded-sm" >አጠናቅ</button>
+                    </div>
+        </div>
+        </form>
+      
+</div>

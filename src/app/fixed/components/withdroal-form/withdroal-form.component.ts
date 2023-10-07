@@ -12,8 +12,8 @@ export class WithdroalFormComponent implements OnInit {
   constructor(private dialog:MatDialog){}
 foremp(){
   this.dialog.open(ForEmployeeComponent,{
-    height:'45%',
-    width:'45%',
+    height:'65%',
+    width:'55%',
   });
 }
 }

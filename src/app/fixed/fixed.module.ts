@@ -22,6 +22,7 @@ import { NgToastModule } from 'ng-angular-popup';
 import { DashboardModule } from '../dashboard/dashboard.module';
 
 import { AuthRoutingModule } from '../auth/auth-routing.module';
+import { ReturnComponent } from './components/return/return.component';
 
 
 
@@ -39,7 +40,8 @@ import { AuthRoutingModule } from '../auth/auth-routing.module';
     ImportpagesComponent,
     WithdroalForEmployeeComponent,
     ForEmployeeComponent,
-    ForDepartmntComponent
+    ForDepartmntComponent,
+    ReturnComponent
   ],
   imports: [
     CommonModule,

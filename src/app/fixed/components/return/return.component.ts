@@ -6,15 +6,15 @@ import { NgToastService } from 'ng-angular-popup';
 import { ImportServiceService } from '../../services/import-service.service';
 
 @Component({
-  selector: 'app-for-employee',
-  templateUrl: './for-employee.component.html',
-  styleUrls: ['./for-employee.component.css']
+  selector: 'app-return',
+  templateUrl: './return.component.html',
+  styleUrls: ['./return.component.css']
 })
-export class ForEmployeeComponent implements OnInit {
+export class ReturnComponent implements OnInit {
   ngOnInit(): void {}
-  constructor(public dialogref:MatDialogRef<ForEmployeeComponent>,
+  constructor(public dialogref:MatDialogRef<ReturnComponent>,
   private router:Router,private builder:FormBuilder, private service:ImportServiceService,private toast:NgToastService){}
-  withdroalform=this.builder.group({
+  returnform=this.builder.group({
     productCode:this.builder.control('',Validators.required),
     quantity:this.builder.control ('', Validators.required),
     employeeId:this.builder.control('', Validators.required),
@@ -23,26 +23,9 @@ export class ForEmployeeComponent implements OnInit {
   onclose(){
     this.dialogref.close(); 
   }
-  SaveInvoice(){
-  //   if(this.withdroalform.valid){
-  //     console.log(this.withdroalform.value)
-  //     let signUpObj = {
-  //      ...this.withdroalform.value,
-  //      role:'',
-  //      token:''
-  //    }
-  //     this.service.Return(signUpObj).subscribe({
-  //      next:(res => {
-       
-  //         this.toast.success({detail:"Message", summary:"Register SuccessFully !!",duration:2000})
-         
-  //      }),
-  //     })
-  
-  // }   
-  // }}
-  console.log(this.withdroalform.value) 
-    this.service.withdroalProduct(this.withdroalform.getRawValue()).subscribe(res => {
+  SaveInvoice() {
+    console.log(this.returnform.value) 
+    this.service.Return(this.returnform.getRawValue()).subscribe(res => {
       let result: any;
       result = res;
       if (result.result == 'Product quantity decreased.') {
@@ -55,4 +38,4 @@ export class ForEmployeeComponent implements OnInit {
       }
     }); 
     }
-  }
+}
