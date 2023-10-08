@@ -15,7 +15,8 @@ children:[
   {path: 'userReg', component:UserRegFormComponent,canActivate:[AuthGuard]},
   {path: 'userlist', component:UserListPageComponent,canActivate:[AuthGuard]},
   {path: 'employeReg', component:EmployeRegFormComponent,canActivate:[AuthGuard]},
-  {path: 'employelist', component:EmployeListPageComponent,canActivate:[AuthGuard]}
+  {path: 'employelist', component:EmployeListPageComponent,canActivate:[AuthGuard]},
+  { path: '**',  redirectTo: 'userlist', pathMatch: 'full'}
 ]
 }
 ];

@@ -9,3 +9,10 @@ input{
 .body{
   display:flex;
 }
+button:hover{
+  background-color: #0c2a4c;
+  color:white;
+  width:120px;
+  height:40px;
+  border-radius:5px;
+}

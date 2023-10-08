@@ -11,35 +11,35 @@
                           <div class="form-group pt-3">
                               <div class="iput-fild"  [class.error]="signupForm.controls['firstName'].dirty && signupForm.hasError('required','firstName')">
                                     <span class="fa fa-user p-2"> </span>
-                                    <input formControlName="firstName" type="text"placeholder="FirstName">
+                                    <input formControlName="firstName" type="text"placeholder=" ስም">
                               </div>
                           </div>
                           <small  *ngIf="signupForm.controls['firstName'].dirty && signupForm.hasError('required','firstName')" class="text-danger"> *firstName is required</small>
                           <div class="form-group pt-3">
                               <div class="iput-fild"  [class.error]="signupForm.controls['lastName'].dirty && signupForm.hasError('required','lastName')">
                                     <span class="fa fa-user p-2"> </span>
-                                    <input formControlName="lastName"type="text"placeholder="LastName">
+                                    <input formControlName="lastName"type="text"placeholder="የአባት ስም">
                               </div>
                           </div>
                           <small *ngIf="signupForm.controls['lastName'].dirty && signupForm.hasError('required','lastName')" class="text-danger"> *lastName is required</small>
                           <div class="form-group pt-3">
                               <div class="iput-fild"  [class.error]="signupForm.controls['email'].dirty && signupForm.hasError('required','email')">
                                     <span class="fa fa-user p-2"> </span>
-                                    <input formControlName="email"type="text"placeholder="Email">
+                                    <input formControlName="email"type="text"placeholder="ኢሜል">
                               </div>
                           </div>
                           <small *ngIf="signupForm.controls['email'].dirty && signupForm.hasError('required','email')" class="text-danger"> *email is required</small>
                           <div class="form-group pt-3">
                               <div class="iput-fild"  [class.error]="signupForm.controls['userName'].dirty && signupForm.hasError('required','userName')">
                                     <span class="fa fa-user p-2"> </span>
-                                    <input formControlName="userName"type="text"placeholder="username">
+                                    <input formControlName="userName"type="text"placeholder="ተጠቃሚ ስም">
                               </div>
                           </div>
                           <small *ngIf="signupForm.controls['userName'].dirty && signupForm.hasError('required','userName')" class="text-danger"> *userName is required</small>
                           <div class="form-group pt-3">
                               <div class="iput-fild"  [class.error]="signupForm.controls['password'].dirty && signupForm.hasError('required','password')">
                                     <span class="fa fa-lock p-2"> </span>
-                                    <input formControlName="password"[type]="type" placeholder="password">
+                                    <input formControlName="password"[type]="type" placeholder="  የይለፍ ቃል">
                                     <span (click)="hideShowPassword()" class="fa {{eyeIcon}}"></span>
                               </div>
                           </div>
@@ -47,7 +47,7 @@
                         <!-- <button type="submit" class="btn btn-primary btn-block mt-4 w-100">signup</button> -->
                         
                 <button type="submit" class="ml-60 pt-5 text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 
-                dark:hover:bg-primary-700 dark:focus:ring-primary-800 hover:bg-blue-300">Save</button>
+                dark:hover:bg-primary-700 dark:focus:ring-primary-800 hover:bg-blue-300">  መዝግብ</button>
                           <!-- <div class="text-center pt-4 text-muted">Already have Account?<a id="forgate" routerLink="/login">Login</a></div> -->
                           <!-- <p class="text-sm font-light text-gray-500 dark:text-gray-400">
                               Already have an account? <a href="#" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Login here</a>

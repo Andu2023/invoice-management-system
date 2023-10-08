@@ -9,6 +9,7 @@ import { ImportFormsComponent } from './components/import-forms/import-forms.com
 import { WithdroalForEmployeeComponent } from './components/withdroal-for-employee/withdroal-for-employee.component';
 import { ForEmployeeComponent } from './components/for-employee/for-employee.component';
 import { OrderComponent } from '../dashboard/components/order/order.component';
+import { authGuardGuard } from '../shared/auth-guard.guard';
 
 
 const routes: Routes = [

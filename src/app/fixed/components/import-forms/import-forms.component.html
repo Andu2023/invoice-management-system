@@ -34,7 +34,7 @@
                              <thead  class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400 ">
                                 <tr class="ml-4">
                                     <td class="px-6 py-3">ቁ</td>
-                                    <td>invoiceNo</td>
+                                    <td class="px-6 py-3">የደረሰኝ .ቁ</td>
                                     <td class="px-6 py-3" >የእቃው ስም</td>
                                     <td class="px-6 py-3" >ሴሪያ.ቁ</td>
                                     <td class="px-6 py-3">ሞደል</td>
@@ -48,7 +48,7 @@
                           <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"  *ngFor="let item of Gebeproduct.controls;let i=index" [formGroupName]="i">
                             <td class="px-6 py-4">{{i+1}}</td>
                             <td class="px-6 py-4">
-                                <input class="form-control" formControlName="invoiceNo"/>
+                                <input class="form-control border-solid border-2 border-gray-600" formControlName="invoiceNo"/>
                              </td>
                              <td class="px-6 py-4">
                                 <input class="form-control border-solid border-2 border-gray-600" formControlName="productName">

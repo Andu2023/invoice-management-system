@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class ImportServiceService {
   // private baseUrl:string = "http://localhost:5252/api/Product/";
+  apiurl='http://localhost:5252/api/catagory/decrease-quantity'
 
   constructor(private http:HttpClient) { }
 
@@ -29,4 +30,8 @@ GetEmployeebyId(fId:any) {
 }
 Return(invoicedata:any){ return this.http.post('http://localhost:5252/api/Product/return',invoicedata );}
 withdroalProduct(invoicedata:any){ return this.http.post('http://localhost:5252/api/catagory/decrease-quantity',invoicedata );}
+
+forEmployee(inputdata:any){
+  return this.http.post(this.apiurl,inputdata);
+}
 }

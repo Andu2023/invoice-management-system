@@ -26,16 +26,10 @@ export class ReturnComponent implements OnInit {
   SaveInvoice() {
     console.log(this.returnform.value) 
     this.service.Return(this.returnform.getRawValue()).subscribe(res => {
+      
       let result: any;
       result = res;
-      if (result.result == 'Product quantity decreased.') {
-      
-      this.toast.success({detail:"success message", summary:"Stored SuccessFully !",duration:2000})
-      }
-      else{
-       
-        this.toast.error({detail:"Eror message", summary:"invalid form please try agin",duration:3000})
-      }
+      alert()
     }); 
     }
 }
