@@ -1,13 +1,13 @@
 
   <mat-toolbar class=" all bg-blue-300" >
+    
     <button mat-icon-button (click)="menuClicked.emit()">
       <mat-icon>menu</mat-icon>
     </button>
+    
     <div class="profile">
-      <!-- <span>
-        hi,
-        andu
-      </span> -->
+      <button class="m-10"><i class='bx bxl-messenger'></i></button>
+      <button class=" m-10"><i class='bx bxs-bell-ring'></i></button>
       <button mat-icon-button [matMenuTriggerFor]="userMenu">
         <mat-icon>account_circle</mat-icon>
       </button>

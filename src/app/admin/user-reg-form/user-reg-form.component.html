@@ -24,7 +24,7 @@
                           <small *ngIf="signupForm.controls['lastName'].dirty && signupForm.hasError('required','lastName')" class="text-danger"> *lastName is required</small>
                           <div class="form-group pt-3">
                               <div class="iput-fild"  [class.error]="signupForm.controls['email'].dirty && signupForm.hasError('required','email')">
-                                    <span class="fa fa-user p-2"> </span>
+                                    <!-- <span class="fa fa-user p-2"> </span> -->
                                     <input formControlName="email"type="text"placeholder="ኢሜል">
                               </div>
                           </div>
@@ -36,6 +36,15 @@
                               </div>
                           </div>
                           <small *ngIf="signupForm.controls['userName'].dirty && signupForm.hasError('required','userName')" class="text-danger"> *userName is required</small>
+
+                          
+                        <!-- <div class="form-group pt-3">
+                            <div class="iput-fild"  [class.error]="signupForm.controls['role'].dirty && signupForm.hasError('required','role')">
+                                  <span class="fa fa-user p-2"> </span>
+                                  <input formControlName="role"type="text"placeholder="ሚና">
+                            </div>
+                        </div>
+                        <small *ngIf="signupForm.controls['role'].dirty && signupForm.hasError('required','role')" class="text-danger"> *email is required</small> -->
                           <div class="form-group pt-3">
                               <div class="iput-fild"  [class.error]="signupForm.controls['password'].dirty && signupForm.hasError('required','password')">
                                     <span class="fa fa-lock p-2"> </span>

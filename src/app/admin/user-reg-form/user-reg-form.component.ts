@@ -26,6 +26,7 @@ ngOnInit(): void {
   lastName:['',Validators.required], 
   userName:['',Validators.required],
   email:['',Validators.required],
+  // role:['',Validators.required],
  password:['', Validators.required ]
       });
     }
