@@ -6,15 +6,15 @@
     </button>
     
     <div class="profile">
-      <button class="m-10"><i class='bx bxl-messenger'></i></button>
-      <button class=" m-10"><i class='bx bxs-bell-ring'></i></button>
+      <button class="m-10 text text-blue-950"><i class='bx bxl-messenger'></i></button>
+      <button class=" m-10 text-blue-950" routerLink="/dashboard/all"><i  class='bx bxs-bell-ring'></i></button>
       <button mat-icon-button [matMenuTriggerFor]="userMenu">
         <mat-icon>account_circle</mat-icon>
       </button>
     </div>
     <mat-menu #userMenu="matMenu" class="bg-white ">
-      <button mat-menu-item routerLink="/profile">
-        <mat-icon>account_box</mat-icon>
+      <button mat-menu-item routerLink="/profile" class=" text-blue-950">
+        <mat-icon class="text-blue-950">account_box</mat-icon>
         <span>profile</span>
       </button>
 <button mat-menu-item (click)="logout()">

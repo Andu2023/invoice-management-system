@@ -11,7 +11,7 @@
     </button>
     
    
-    <div class="profile">  <button class="m-10"><i class='bx bxl-messenger'></i></button>
+    <div class="profile">  <button class="m-10 text-blue-950"><i class='bx bxl-messenger'></i></button>
       <!-- <span>
         hi,
         andu
@@ -24,11 +24,11 @@
     <mat-menu #userMenu="matMenu" class="bg-white ">
       <button mat-menu-item routerLink="/profile">
         <mat-icon>account_box</mat-icon>
-        <span>profile</span>
+        <span class="text-blue-950">profile</span>
       </button>
 <button mat-menu-item (click)="logout()">
   <mat-icon>logout</mat-icon>
-  <span>logout</span>
+  <span class="text-blue-950">logout</span>
 </button>
 
 <!-- <button mat-menu-item routerLink="/login">

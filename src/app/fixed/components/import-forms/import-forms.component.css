@@ -2,7 +2,9 @@ h3 {
   display: flex;
   align-items: center;
 }
-
+.bg-red{
+  color:#0c2a4c;
+}
 label {
   font-weight: 500;
 }

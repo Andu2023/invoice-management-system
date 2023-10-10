@@ -158,4 +158,7 @@ customerchange() {
     }
   });
 }
+print(){
+  window.print();
+}
 }
