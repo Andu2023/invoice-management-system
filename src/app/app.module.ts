@@ -19,6 +19,7 @@ import { SwiperComponent } from './swiper/swiper.component';
 import { NgToastModule } from 'ng-angular-popup';
 import { ContactFormComponent } from './common/contact-form/contact-form.component';
 import { TokenInterceptor } from './interceptor/token.interceptor';
+import { DisplayMessageComponent } from './common/display-message/display-message.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { TokenInterceptor } from './interceptor/token.interceptor';
     HomePageComponent,
     SwiperComponent,
     ContactFormComponent,
+    DisplayMessageComponent,
    
   ],
   imports: [
