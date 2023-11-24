@@ -20,6 +20,7 @@ import { NgToastModule } from 'ng-angular-popup';
 import { ContactFormComponent } from './common/contact-form/contact-form.component';
 import { TokenInterceptor } from './interceptor/token.interceptor';
 import { DisplayMessageComponent } from './common/display-message/display-message.component';
+import { NonFixedModule } from './non-fixed/non-fixed.module';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { DisplayMessageComponent } from './common/display-message/display-messag
   
   DashboardModule,
   MatStepperModule,
-  AuthModule
+  AuthModule,
+  NonFixedModule
 
   
 

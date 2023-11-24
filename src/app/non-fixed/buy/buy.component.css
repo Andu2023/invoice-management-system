@@ -1,0 +1,56 @@
+h3 {
+  display: flex;
+  align-items: center;
+}
+/* .all{
+  height:230px;
+} */
+.bg-red{
+  color:#0c2a4c;
+}
+label {
+  font-weight: 500;
+}
+.trans .col-lg-6 {
+  padding-left: 60px;
+}
+
+.reciv .col-lg-6 {
+  padding-left: 70px;
+}
+input {
+  border-radius: 3px;
+}
+
+button {
+  border-radius: 5px;
+  color: black;
+}
+mat-icon {
+  font-size: 12px;
+  align-items: center;
+  color: red;
+  background-color: #fff;
+}
+.table-header {
+  color: black;
+  column-gap: 30px;
+  /* background-color: #fff; */
+}
+.card {
+  background-color: #fff;
+  align-items: center;
+  margin-left: 150px;
+}
+mat-toolbar {
+  width: auto;
+  background-color: #fff;
+ 
+}
+h3 {
+  margin-left: 260px;
+  padding: 10px;
+}
+.save {
+  padding-left: 270px;
+}
