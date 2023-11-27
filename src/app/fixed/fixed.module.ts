@@ -23,6 +23,7 @@ import { DashboardModule } from '../dashboard/dashboard.module';
 
 import { AuthRoutingModule } from '../auth/auth-routing.module';
 import { ReturnComponent } from './components/return/return.component';
+import { CategoryComponent } from './components/category/category.component';
 
 
 
@@ -41,7 +42,8 @@ import { ReturnComponent } from './components/return/return.component';
     WithdroalForEmployeeComponent,
     ForEmployeeComponent,
     ForDepartmntComponent,
-    ReturnComponent
+    ReturnComponent,
+    CategoryComponent
   ],
   imports: [
     CommonModule,

@@ -45,9 +45,7 @@ Gebiform=this.builder.group({
        
       
 });
-// onclose(){
-//   this.dialogref.close(); 
-// }
+
 
 onReset() {
   this.Gebiform.reset();
