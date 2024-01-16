@@ -2,23 +2,22 @@ import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NgToastService } from 'ng-angular-popup';
-import { ImportServiceService } from 'src/app/fixed/services/import-service.service';
 import ValidateForm from 'src/app/helper/validateForms';
 
 @Component({
-  selector: 'app-buy',
-  templateUrl: './buy.component.html',
-  styleUrls: ['./buy.component.css']
+  selector: 'app-add-material',
+  templateUrl: './add-material.component.html',
+  styleUrls: ['./add-material.component.css']
 })
-export class BuyComponent  implements OnInit {
+export class AddMaterialComponent implements OnInit {
   
- 
   pagetitle="ገቢ ቅፅ";
   Indetials !:FormArray<any>;
   invoiceproduct !: FormGroup<any>;
   mastercustomer: any;
   masterproduct: any;
 constructor(private builder:FormBuilder,
+ 
   private router:Router,
  private toast:NgToastService
   ){}
@@ -45,28 +44,16 @@ Gebiform=this.builder.group({
        
       
 });
-
+onclose(){
+  
+}
 
 onReset() {
   this.Gebiform.reset();
 }
 
 SaveInvoice() {
-  // console.log(this.Gebiform.value) 
-  // this.service.SaveProducts(this.Gebiform.getRawValue()).subscribe(res => {
-  //   let result: any;
-  //   result = res;
-  //   if (result.result == 'pass') {
-    
-  //   this.toast.success({detail:"success message", summary:"Stored SuccessFully !",duration:2000})
-  //   }
-  //   else{
-  //     ValidateForm.validateAllFormFields(this.Gebiform);
-  //     this.toast.error({detail:"Eror message", summary:"invalid form please try agin",duration:3000})
-  //   }
-      
-  //   });  
-
+  
 }
 
 addnewproduct() {
@@ -143,19 +130,8 @@ Removeproduct(index: any){
 
   }
 }
-customerchange() {
-  // let fId= this.Gebiform.get("customerId")?.value;
-  // this.service.GetEmployeebyId(fId).subscribe(res => {
-  //   let custdata: any;
-  //   custdata = res;
-  //   if (custdata != null) {
-     
-  //     this.Gebiform.get("customerName")?.setValue(custdata.name);
-  //   }
-  // });
-}
+
 print(){
   window.print();
 }
-
 }

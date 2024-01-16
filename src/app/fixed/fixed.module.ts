@@ -25,6 +25,9 @@ import { AuthRoutingModule } from '../auth/auth-routing.module';
 import { ReturnComponent } from './components/return/return.component';
 import { CategoryComponent } from './components/category/category.component';
 
+import { AddMaterialComponent } from './components/add-material/add-material.component';
+import { StorePageComponent } from './components/store-page/store-page.component';
+
 
 
 
@@ -43,7 +46,10 @@ import { CategoryComponent } from './components/category/category.component';
     ForEmployeeComponent,
     ForDepartmntComponent,
     ReturnComponent,
-    CategoryComponent
+    CategoryComponent,
+
+    AddMaterialComponent,
+     StorePageComponent
   ],
   imports: [
     CommonModule,

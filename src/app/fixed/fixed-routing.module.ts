@@ -10,6 +10,8 @@ import { WithdroalForEmployeeComponent } from './components/withdroal-for-employ
 import { ForEmployeeComponent } from './components/for-employee/for-employee.component';
 import { OrderComponent } from '../dashboard/components/order/order.component';
 import { authGuardGuard } from '../shared/auth-guard.guard';
+import { AddMaterialComponent } from './components/add-material/add-material.component';
+import { StorePageComponent } from './components/store-page/store-page.component';
 
 
 const routes: Routes = [
@@ -23,6 +25,7 @@ const routes: Routes = [
       {path: 'emp', component:WithdroalForEmployeeComponent }, 
       {path: 'foremp', component:ForEmployeeComponent }, 
       {path: 'order', component:OrderComponent }, 
+      {path: 'addMaterial', component:StorePageComponent }, 
     ]
   }
 ];
