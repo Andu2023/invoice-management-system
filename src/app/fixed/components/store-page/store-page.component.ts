@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
 import { AddMaterialComponent } from '../add-material/add-material.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-store-page',
@@ -13,10 +13,9 @@ constructor(private dialog:MatDialog){}
   Transferproduct(){
     this.dialog.open(AddMaterialComponent,{
       height:'95%',
-      width:'100%',
+      width:'95%',
     });
 
   }
-
 
 }
