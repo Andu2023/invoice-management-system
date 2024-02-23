@@ -1,16 +1,13 @@
 
  .container {
-  padding: 60px;
+  /* padding: 60px; */
   display: flex;
   justify-content: space-between;
   font-size: 22px;
   font-weight: 500;
   font-family: 'Times New Roman', Times, serif;
 }
-img {
-width: 500px;
-height: 400px;
-}
+
 
 .content {
   margin-top: 20px;

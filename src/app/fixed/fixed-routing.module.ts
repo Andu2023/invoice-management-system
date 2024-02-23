@@ -12,20 +12,21 @@ import { OrderComponent } from '../dashboard/components/order/order.component';
 import { authGuardGuard } from '../shared/auth-guard.guard';
 import { AddMaterialComponent } from './components/add-material/add-material.component';
 import { StorePageComponent } from './components/store-page/store-page.component';
+import { AuthGuard } from '../guards/auth.guard';
 
 
 const routes: Routes = [
   {
     path: 'fixed', component:FixedComponent,
     children:[
-      {path: 'import', component:ImportpagesComponent},
-      {path: 'withdroal',component:WithdroalFormComponent }, 
+      {path: 'import', component:ImportpagesComponent ,canActivate:[AuthGuard]},
+      {path: 'withdroal',component:WithdroalFormComponent ,canActivate:[AuthGuard]}, 
       // {path: 'transfer', component:TransferFormComponent },
-      {path: 'transferpage', component:TransferPageComponent },  
-      {path: 'emp', component:WithdroalForEmployeeComponent }, 
-      {path: 'foremp', component:ForEmployeeComponent }, 
-      {path: 'order', component:OrderComponent }, 
-      {path: 'addMaterial', component:StorePageComponent }, 
+      {path: 'transferpage', component:TransferPageComponent,canActivate:[AuthGuard] },  
+      {path: 'emp', component:WithdroalForEmployeeComponent ,canActivate:[AuthGuard]}, 
+      {path: 'foremp', component:ForEmployeeComponent ,canActivate:[AuthGuard]}, 
+      {path: 'order', component:OrderComponent,canActivate:[AuthGuard] }, 
+      {path: 'addMaterial', component:StorePageComponent,canActivate:[AuthGuard] }, 
     ]
   }
 ];

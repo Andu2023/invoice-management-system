@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { NgToastService } from 'ng-angular-popup';
 import ValidateForm from 'src/app/helper/validateForms';
@@ -19,7 +20,7 @@ export class AddMaterialComponent implements OnInit {
 constructor(private builder:FormBuilder,
  
   private router:Router,
- private toast:NgToastService
+ private toast:NgToastService,public dialogref:MatDialogRef<AddMaterialComponent>,
   ){}
 ngOnInit(): void {
   this.GetCustomers();
@@ -45,8 +46,9 @@ Gebiform=this.builder.group({
       
 });
 onclose(){
-  
+  this.dialogref.close(); 
 }
+
 
 onReset() {
   this.Gebiform.reset();

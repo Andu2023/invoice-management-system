@@ -12,6 +12,7 @@ label {
   padding-left: 60px;
 }
 
+
 .reciv .col-lg-6 {
   padding-left: 70px;
 }
@@ -25,7 +26,7 @@ button {
   color: black;
 }
 mat-icon {
-  font-size: 12px;
+  font-size: 22px;
   align-items: center;
   color: red;
   background-color: #fff;
@@ -55,3 +56,12 @@ h3 {
 .save {
   padding-left: 270px;
 }
+.print{
+  background:gray;
+  width:80px;
+  border-radius:5px;
+}
+.print:hover{
+  color:blue;
+}
+

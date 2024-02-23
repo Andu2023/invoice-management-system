@@ -1,6 +1,12 @@
 <div class="all">
  
- 
+    <mat-toolbar class="flex justify-end bg-white w-full">
+        <button class=" print bg-blue m-10" (click)="print()">print</button>
+     <button class="btn-dialog-close flex justify-center items-center" mat-stroked-button (click)="onclose()" tabindex="-1">
+         <mat-icon class="bg-white">close</mat-icon>
+     </button>
+     
+   </mat-toolbar>
   <form class="container  bg-white w-full ml-10 " [formGroup]="Gebiform" (ngSubmit)="SaveInvoice()">
   
         
@@ -30,7 +36,7 @@
                    <table class="" formArrayName="detials">
                            <thead  class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400 mr-10 ">
                               <tr class="">
-                                  <td class="px-6 py-3">ቁ</td>
+                                  <td class="">ቁ</td>
                                   <td class="px-6 py-3">የደረሰኝ .ቁ</td>
                                   <td class="px-6 py-3" >የእቃው ስም</td>
                                   <td class="px-6 py-3" >ሴሪያ.ቁ</td>
@@ -45,7 +51,7 @@
                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 "  *ngFor="let item of Gebeproduct.controls;let i=index" [formGroupName]="i">
                           <td class="">{{i+1}}</td>
                           <td class="">
-                              <input class=" form-control w-24" formControlName="invoiceNo"/>
+                              <input class=" form-control w-24 " formControlName="invoiceNo"/>
                            </td>
                            <td class="">
                               <input class=" form-control w-32" formControlName="productName">

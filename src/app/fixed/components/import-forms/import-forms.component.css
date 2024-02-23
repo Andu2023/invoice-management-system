@@ -24,7 +24,7 @@ button {
   color: black;
 }
 mat-icon {
-  font-size: 12px;
+  font-size: 22px;
   align-items: center;
   color: red;
   background-color: #fff;
@@ -37,7 +37,7 @@ mat-icon {
 .card {
   background-color: #fff;
   align-items: center;
-  margin-left: 150px;
+  margin-left: 50px;
 }
 mat-toolbar {
   width: auto;
@@ -50,4 +50,12 @@ h3 {
 }
 .save {
   padding-left: 270px;
+}
+.print{
+  background:gray;
+  width:80px;
+  border-radius:5px;
+}
+.print:hover{
+  color:blue;
 }

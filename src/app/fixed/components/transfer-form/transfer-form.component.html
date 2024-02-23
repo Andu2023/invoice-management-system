@@ -72,25 +72,25 @@
                            <tbody>
                               <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700" *ngFor="let item of Gebeproduct.controls;let i=index"[formGroupName]="i ">
                                   <td class="px-6 py-4">{{i+1}}</td>
-                       <td class="px-6 py-4">
-                          <input class="form-control outline-none border px-3 py-1 bg-gray-300 " formControlName="Description">
+                       <td class="">
+                          <input class="form-control outline-none border px-3 py-1 bg-gray-300 w-24  " formControlName="Description">
                        </td>
-                       <td class="px-6 py-4">
-                          <input class="form-control  outline-none border px-3 py-1 bg-gray-300" formControlName=" PIN">
+                       <td class="">
+                          <input class="form-control  outline-none border px-3 py-1 bg-gray-300 w-24 " formControlName=" PIN">
                        </td>
-                       <td class="px-6 py-4">
-                          <input class="form-control border px-3 py-1 bg-gray-300" formControlName="Serial">
+                       <td class="">
+                          <input class="form-control border px-3 py-1 bg-gray-300 w-52 " formControlName="Serial">
                        </td>
-                       <td class="px-6 py-4">
-                          <input class="form-control outline-none border px-3 py-1 bg-gray-300" formControlName="Quantity">
+                       <td class="">
+                          <input class="form-control outline-none border px-3 py-1 bg-gray-300 w-40 " formControlName="Quantity">
                        </td>
-                       <td class="px-6 py-4">
-                          <input class="form-control outline-none border px-3 py-1 bg-gray-300" formControlName="Price">
+                       <td class="">
+                          <input class="form-control outline-none border px-3 py-1 bg-gray-300 w-40 " formControlName="Price">
                        </td>
-                       <td class="px-6 py-4">
-                          <input class="form-control outline-none border px-3 py-1 bg-gray-300" formControlName="Remark">
+                       <td class="">
+                          <input class="form-control outline-none border px-3 py-1 bg-gray-300 w-40 " formControlName="Remark">
                        </td>
-                       <td class="px-6 py-4">
+                       <td class="">
                           <a class="btn btn-danger"> <mat-icon>delete</mat-icon></a>
                        </td>
                         </tr>
@@ -98,7 +98,7 @@
                            <tfoot>
                               <tr>
                                   <td class="colspan=6">
-                               <a  (click)="addnewproduct()" class="btn btn-primary"><button class="bg-blue-200 w-20">ንብረቱን ያስገቡ</button></a>
+                               <a  (click)="addnewproduct()" class="btn btn-primary"><button class="bg-blue-200 ">ንብረቱን ያስገቡ</button></a>
                                   </td>
                               </tr>
                            </tfoot>
