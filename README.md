@@ -1,27 +1,92 @@
-# MMSystemFrontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.8.
+Invoice Management System
 
-## Development server
+Overview
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+The Invoice Management System is a web application designed to streamline the creation, 
+management, and tracking of invoices.
+Built with modern technologies including ASP.NET for the backend, 
+Angular for the frontend, and 
+Tailwind CSS for styling, this system ensures an efficient and user-friendly experience.
 
-## Code scaffolding
+Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Invoice Creation: Easily generate new invoices with dynamic fields.
 
-## Build
+Invoice Tracking: Track the status of invoices (pending, paid, overdue).
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Client Management: Store and manage client details for quick access.
 
-## Running unit tests
+Reports and Analytics: Generate financial reports to monitor performance.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+User Authentication: Secure login system to manage user roles and permissions.
 
-## Running end-to-end tests
+Responsive Design: Tailwind CSS ensures a mobile-friendly interface.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Technologies Used
 
-## Further help
+Frontend: Angular
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Backend: ASP.NET Core
+
+Styling: Tailwind CSS
+
+Database: SQL Server
+
+Installation
+
+Prerequisites
+
+Node.js and npm
+
+Angular CLI
+
+.NET SDK
+
+SQL Server
+
+Backend Setup
+
+Clone the repository:
+
+git clone https://github.com/Andu2023/MMSystem-Angular-DotNetCore/
+
+Navigate to the backend folder:
+
+cd backend
+
+Restore dependencies:
+
+dotnet restore
+
+Configure the database in appsettings.json.
+
+Run the application:
+
+dotnet run
+
+Frontend Setup
+
+Navigate to the frontend folder:
+
+cd frontend
+
+Install dependencies:
+
+npm install
+
+Run the Angular development server:
+
+ng serve
+
+Open the app in your browser at http://localhost:4200
+
+Usage
+
+Admin Dashboard: Manage clients, invoices, and reports.
+
+User Dashboard: Create invoices .
+
+Reports: View and download financial reports.
+
+Folder Structure
