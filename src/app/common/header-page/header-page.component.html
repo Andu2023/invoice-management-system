@@ -1,17 +1,17 @@
 <!-- <div class="header-contaner"> -->
   <div class="container-fluid sticky top-0 left-0 z-50" id="header-top">
-    <div class="">
+    <!-- <div class="">
       <img src="/assets/Logo/EFPlogo.jpg" alt="">
-    </div>
+    </div> -->
 
     <div class="w-full ">    
       <nav *ngIf="displaymenu" >
         <div class="navbar">
         <div class="nav-links ">
             <ul class="links flex pl-28">
-               <li> <a routerLink="/admin"  *ngIf="role === 'admin'">ዳሽቦርድ </a></li>
-               <li> <a routerLink="/dashboard"  *ngIf="role === 'mangment'">ዳሽቦርድ </a></li>
-                <li *ngIf="role === 'mangment'">
+               <li> <a routerLink="/admin"  >ዳሽቦርድ </a></li>
+               <li> <a routerLink="/dashboard"  >ዳሽቦርድ </a></li>
+                <li >
             <a href="#">ንብረት</a>
             <i class='bx bx-chevron-down arrow html-arrow'></i>
             <ul class="html-sub-menu html-sub">
@@ -30,21 +30,21 @@
     
         </li>
         
-               <li *ngIf="role === 'mangment'">
+               <li >
                 <a href="#" >የጦር መሣሪያ</a>
                 <i class='bx bx-chevron-down arrow ja-arrow' ></i>
                 <ul class="html-sub-menu java-sub">
                     <li><a routerLink="/admin/userReg">መመዝገብ</a></li>
                     <li><a href="#">ማስተላለፍ</a></li>
                     <li><a href="#">ማስወገድ</a></li>
-                    <!-- <li><a href="#">More </a>
+                    <li><a href="#">More </a>
                         <i class='bx bx-chevron-right arrow more-arrow'></i>
-                    </li> -->
+                    </li>
                 </ul>
             
             </li>
               <li>  
-                <a routerLink="/home"  *ngIf="role === 'mangment'" >
+                <a routerLink="/home"   >
                   ሪፖርት</a>
             </li>
     
@@ -53,7 +53,7 @@
                  <a routerLink="contact"> ግንኙነት</a>
                 </li>
                 <li > 
-                  <a routerLink="fixed/order" *ngIf="role === 'user'">ትዕዛዝ</a>
+                  <a routerLink="fixed/order" >ትዕዛዝ</a>
                  </li>
                 <div class="logout">
                   <a href=""><h1>{{fullName}}</h1></a>

@@ -1,39 +1,64 @@
-<!-- <div class="header">
-    <div class="logo"><i class='bx bx-menu'></i></div>
-    <div class="user">
-      <div class="user-name">andualem </div>
-      <div class="user-image">fp</div>
-    </div>
-  </div> -->
-  <mat-toolbar class="all" >
-    <button  mat-icon-button (click)="menuClicked.emit()">
+<mat-toolbar class="flex justify-between items-center px-4 shadow bg-white">
+  <!-- Left: Menu button -->
+  <div class="flex items-center">
+    <button mat-icon-button (click)="menuClicked.emit()">
       <mat-icon>menu</mat-icon>
     </button>
-    
-   
-    <div class="profile">  <button class="m-10 text-blue-950"><i class='bx bxl-messenger'></i></button>
-      <!-- <span>
-        hi,
-        andu
-      </span> -->
+  </div>
+
+  <!-- Right: Actions -->
+  <div class="flex items-center gap-4 pr-4 relative">
+    <!-- Message Icon -->
+    <button mat-icon-button>
+      <i class='bx bxl-messenger text-xl text-blue-900'></i>
+    </button>
+
+    <!-- Notifications Icon with Badge -->
+    <div class="relative">
+      <button mat-icon-button [matMenuTriggerFor]="notifMenu">
+        <mat-icon>notifications</mat-icon>
+      </button>
+      <!-- Notification Badge -->
+      <span
+        class="absolute top-0 right-0 -mt-1 -mr-1 bg-red-600 text-white text-xs font-bold px-1.5 rounded-full">
+        3
+      </span>
+    </div>
+
+    <mat-menu #notifMenu="matMenu" class="bg-white w-72">
+      <h3 class="text-md font-semibold px-4 pt-2 pb-1 text-gray-700">Notifications</h3>
+      <mat-divider></mat-divider>
+      <button mat-menu-item>
+        <mat-icon class="text-blue-500">person_add</mat-icon>
+        <span class="text-sm">New employee registered</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon class="text-orange-500">report_problem</mat-icon>
+        <span class="text-sm">Material shortage alert</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon class="text-green-600">check_circle</mat-icon>
+        <span class="text-sm">New order processed</span>
+      </button>
+    </mat-menu>
+
+    <!-- Profile Menu with Admin label -->
+    <div class="flex items-center gap-1">
+      <span class="text-sm font-medium text-gray-800">Admin</span>
       <button mat-icon-button [matMenuTriggerFor]="userMenu">
-       
         <mat-icon>account_circle</mat-icon>
       </button>
     </div>
-    <mat-menu #userMenu="matMenu" class="bg-white ">
+
+    <mat-menu #userMenu="matMenu" class="bg-white">
       <button mat-menu-item routerLink="/profile">
         <mat-icon>account_box</mat-icon>
-        <span class="text-blue-950">profile</span>
+        <span class="text-blue-950">Profile</span>
       </button>
-<button mat-menu-item (click)="logout()">
-  <mat-icon>logout</mat-icon>
-  <span class="text-blue-950">logout</span>
-</button>
-
-<!-- <button mat-menu-item routerLink="/login">
-  <mat-icon>logout</mat-icon>
-  <span>logout</span>
-</button> -->
+      <button mat-menu-item (click)="logout()">
+        <mat-icon>logout</mat-icon>
+        <span class="text-blue-950">Logout</span>
+      </button>
     </mat-menu>
-  </mat-toolbar>
+  </div>
+</mat-toolbar>

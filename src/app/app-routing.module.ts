@@ -5,10 +5,10 @@ import { AuthGuard } from './guards/auth.guard';
 import { ContactFormComponent } from './common/contact-form/contact-form.component';
 
 const routes: Routes = [
-  { path: '',  redirectTo: '/auth/login', pathMatch: 'full'},
+  // { path: '',  redirectTo: '/auth/login', pathMatch: 'full'},
   {
     path:'home',
-    component:HomePageComponent,canActivate:[AuthGuard]
+    component:HomePageComponent
   },
   {
     path:'contact',

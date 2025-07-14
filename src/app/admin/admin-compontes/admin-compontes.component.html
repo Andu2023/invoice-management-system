@@ -1,17 +1,21 @@
+<div class="flex min-h-screen bg-gray-100">
+  <!-- Sidebar (left) -->
+  <aside class="w-64 bg-white border-r border-gray-200 min-h-screen fixed left-0 top-0">
+    <app-admin-sidenav></app-admin-sidenav>
+  </aside>
 
+  <!-- Right Content Area (Header + Main Content) -->
+  <div class="ml-64 flex-1 flex flex-col">
+    <!-- Header inside main panel -->
+    <header class="h-16  ">
+      <app-admin-header></app-admin-header>
+    </header>
 
-<div class="container bg-gray-300">
-  <div class="header bg-white">
-    <app-admin-header></app-admin-header>
+    <!-- Main Content -->
+    <main class="flex-1 p-6 bg-gray-50 overflow-y-auto">
+      <div class="bg-white shadow rounded-lg p-6">
+        <app-admin></app-admin>
+      </div>
+    </main>
   </div>
-  <div class="main-container">
-    <div class="side-nav mb-2  mat-elevation-z6" mode="side" #sidenav opened>
-      <app-admin-sidenav></app-admin-sidenav>
-    </div>
-    <div class="main bg-whit bg-gray-300 ml-5 mt-5 pr-10 pb-10 " >
-<app-admin></app-admin>
-    </div>
-  
-  </div>
-  </div>
-  
+</div>
