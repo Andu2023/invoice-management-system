@@ -14,12 +14,12 @@ import ValidateForm from 'src/app/helper/validateForms';
 })
 export class ImportFormsComponent  implements OnInit {
   
-  pagetitle="ገቢ ቅፅ";
+  pagetitle="Register Form";
   Indetials !:FormArray<any>;
   invoiceproduct !: FormGroup<any>;
   mastercustomer: any;
   masterproduct: any;
-constructor(private builder:FormBuilder,public dialogref:MatDialogRef<ImportFormsComponent>,
+constructor(private builder:FormBuilder,
   private service:ImportServiceService,
   private router:Router,
  private toast:NgToastService
@@ -47,9 +47,9 @@ Gebiform=this.builder.group({
        
       
 });
-onclose(){
-  this.dialogref.close(); 
-}
+// onclose(){
+//   this.dialogref.close(); 
+// }
 
 onReset() {
   this.Gebiform.reset();

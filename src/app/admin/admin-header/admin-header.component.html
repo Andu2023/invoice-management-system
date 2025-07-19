@@ -1,24 +1,27 @@
-<mat-toolbar class="flex justify-between items-center px-4 shadow bg-white">
-  <!-- Left: Menu button -->
-  <div class="flex items-center">
-    <button mat-icon-button (click)="menuClicked.emit()">
+<mat-toolbar
+  class="flex justify-between items-center px-4 shadow bg-white sticky top-0 z-30 w-full"
+  color="primary">
+
+  <!-- Left: Menu Icon -->
+  <div class="flex items-center space-x-2">
+    <button mat-icon-button aria-label="Toggle menu" (click)="menuClicked.emit()">
       <mat-icon>menu</mat-icon>
     </button>
   </div>
 
-  <!-- Right: Actions -->
-  <div class="flex items-center gap-4 pr-4 relative">
-    <!-- Message Icon -->
-    <button mat-icon-button>
-      <i class='bx bxl-messenger text-xl text-blue-900'></i>
+  <!-- Right: Toolbar Actions -->
+  <div class="flex items-center space-x-4 relative">
+
+    <!-- Theme Toggle -->
+    <button mat-icon-button aria-label="Toggle dark/light mode" (click)="toggleTheme()">
+      <i class="bx bx-moon text-xl text-gray-800"></i>
     </button>
 
-    <!-- Notifications Icon with Badge -->
+    <!-- Notifications with Badge -->
     <div class="relative">
-      <button mat-icon-button [matMenuTriggerFor]="notifMenu">
+      <button mat-icon-button aria-label="Notifications" [matMenuTriggerFor]="notifMenu">
         <mat-icon>notifications</mat-icon>
       </button>
-      <!-- Notification Badge -->
       <span
         class="absolute top-0 right-0 -mt-1 -mr-1 bg-red-600 text-white text-xs font-bold px-1.5 rounded-full">
         3
@@ -42,10 +45,10 @@
       </button>
     </mat-menu>
 
-    <!-- Profile Menu with Admin label -->
+    <!-- User Profile -->
     <div class="flex items-center gap-1">
       <span class="text-sm font-medium text-gray-800">Admin</span>
-      <button mat-icon-button [matMenuTriggerFor]="userMenu">
+      <button mat-icon-button aria-label="User menu" [matMenuTriggerFor]="userMenu">
         <mat-icon>account_circle</mat-icon>
       </button>
     </div>
@@ -60,5 +63,6 @@
         <span class="text-blue-950">Logout</span>
       </button>
     </mat-menu>
+
   </div>
 </mat-toolbar>

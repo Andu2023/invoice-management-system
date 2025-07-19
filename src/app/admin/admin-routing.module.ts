@@ -8,6 +8,8 @@ import { UserPageComponent } from './user-page/user-page.component';
 import { UserListPageComponent } from './user-list-page/user-list-page.component';
 import { EmployeListPageComponent } from './employe-list-page/employe-list-page.component';
 import { AuthGuard } from '../guards/auth.guard';
+import { ImportFormsComponent } from '../fixed/components/import-forms/import-forms.component';
+import { DashboardOverviewComponent } from './components/dashboard-overview/dashboard-overview.component';
 
 const routes: Routes = [
   { path: 'admin', component:AdminCompontesComponent,
@@ -16,7 +18,13 @@ children:[
   {path: 'userlist', component:UserListPageComponent},
   {path: 'employeReg', component:EmployeRegFormComponent},
   {path: 'employelist', component:EmployeListPageComponent},
-  { path: '**',  redirectTo: 'userlist', pathMatch: 'full'}
+  // {path: 'import', component:ImportFormsComponent},
+   {path: 'import', component:ImportFormsComponent},
+   { path: 'dashboard', component: DashboardOverviewComponent },
+
+
+{ path: '', redirectTo: 'dashboard', pathMatch: 'full' }
+
 ]
 }
 ];

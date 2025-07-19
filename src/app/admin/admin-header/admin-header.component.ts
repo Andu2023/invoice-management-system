@@ -16,4 +16,8 @@ export class AdminHeaderComponent {
   logout(){
     this.auth.signOut();
   }
+  toggleTheme() {
+  document.body.classList.toggle('dark-mode'); // You can use Tailwind's dark mode or your own styles
+}
+
 }

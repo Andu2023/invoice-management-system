@@ -19,7 +19,7 @@ const routes: Routes = [
   {
     path: 'fixed', component:FixedComponent,
     children:[
-      {path: 'import', component:ImportpagesComponent},
+      {path: 'import', component:ImportFormsComponent},
       {path: 'withdroal',component:WithdroalFormComponent ,canActivate:[AuthGuard]}, 
       // {path: 'transfer', component:TransferFormComponent },
       {path: 'transferpage', component:TransferPageComponent,canActivate:[AuthGuard] },  

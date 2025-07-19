@@ -15,6 +15,7 @@ import { MaterialModule } from '../Material/MaterialModule';
 import { AdminCompontesComponent } from './admin-compontes/admin-compontes.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgToastModule } from 'ng-angular-popup';
+import { DashboardOverviewComponent } from './components/dashboard-overview/dashboard-overview.component';
 
 
 
@@ -28,7 +29,8 @@ import { NgToastModule } from 'ng-angular-popup';
     AdminHeaderComponent,
     AdminSidenavComponent,
     AdminMainComponent,
-    AdminCompontesComponent
+    AdminCompontesComponent,
+    DashboardOverviewComponent
   ],
   imports: [
     CommonModule,
